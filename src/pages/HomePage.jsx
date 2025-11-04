@@ -33,7 +33,7 @@ const HomePage = () => {
     {
       title: "Jai Guruji Sacred Candles",
       subtitle: "Divine Fragrances for Spiritual Moments",
-      cta: "Order Collection",
+      cta: "Explore Collection",
       link: "/collection/jai-guruji",
       image: "/asserts/img/11.png",
       category: "spiritual"
@@ -41,7 +41,7 @@ const HomePage = () => {
     {
       title: "Gifting Made Glowing",
       subtitle: "Perfect Presents for Every Occasion",
-      cta: "Find Gifts",
+      cta: "Explore Now",
       link: "/collection/gifting",
       image: "/asserts/img/gift.png",
       category: "gifting"
@@ -49,7 +49,7 @@ const HomePage = () => {
     {
       title: "Trending Candles",
       subtitle: "Our Most Popular Scents Right Now",
-      cta: "Order Now",
+      cta: "Explore Now",
       link: "/collection/trending",
       image: "/asserts/img/11.png",
       category: "trending"
@@ -349,6 +349,7 @@ const HomePage = () => {
               <li>• 50-60 hour burn time</li>
               <li>• Perfect for meditation and spiritual practices</li>
             </ul>
+            <br></br>
             <Link to="/collection/jai-guruji">
               <Button variant="primary" size="lg">
                 Explore Collection

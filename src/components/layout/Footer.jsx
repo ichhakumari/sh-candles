@@ -23,17 +23,19 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#E5C9B6] text-[#3B2F2F]">
+    <footer className="bg-black text-white">
+     {/* <footer className="bg-[#E5C9B6] text-[#3B2F2F]"> */}
       <div className="w-full px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand & Newsletter */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block mb-6">
-              <h2 className="text-3xl font-serif font-semibold text-[#C6A27E]">
+              {/* <h2 className="text-3xl font-serif font-semibold text-white">
                 Sharoma
-              </h2>
+              </h2> */}
+              <img src='/asserts/img/logobg.png' alt = "logo"  className="w-48 md:w-40 lg:w-44 h-auto mx-auto"></img>
             </Link>
-            <p className="text-[#3B2F2F] mb-6 max-w-md leading-relaxed">
+            <p className="text-white mb-6 max-w-md leading-relaxed">
               Crafting premium candles that transform spaces into sanctuaries of
               calm and luxury. Each flame tells a story of artisanal excellence
               and sensory delight.
@@ -55,21 +57,21 @@ const Footer = () => {
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="p-2 text-[#3B2F2F] hover:text-[#C6A27E] transition-colors"
+                className="p-2 text-white hover:text-[#C6A27E] transition-colors"
                 aria-label="Instagram"
               >
                 <SafeIcon icon={FiInstagram} className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="p-2 text-[#3B2F2F] hover:text-[#C6A27E] transition-colors"
+                className="p-2 text-white hover:text-[#C6A27E] transition-colors"
                 aria-label="Facebook"
               >
                 <SafeIcon icon={FiFacebook} className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="p-2 text-[#3B2F2F] hover:text-[#C6A27E] transition-colors"
+                className="p-2 text-white hover:text-[#C6A27E] transition-colors"
                 aria-label="Twitter"
               >
                 <SafeIcon icon={FiTwitter} className="w-5 h-5" />
@@ -84,7 +86,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/shop"
-                  className="text-[#3B2F2F] hover:text-[#C6A27E] transition-colors"
+                  className="text-white hover:text-[#C6A27E] transition-colors"
                 >
                   Shop All
                 </Link>
@@ -92,7 +94,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/collection/jai-guruji"
-                  className="text-[#3B2F2F] hover:text-[#C6A27E] transition-colors"
+                  className="text-white hover:text-[#C6A27E] transition-colors"
                 >
                   Jai Guruji Collection
                 </Link>
@@ -100,7 +102,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/collection/gifting"
-                  className="text-[#3B2F2F] hover:text-[#C6A27E] transition-colors"
+                  className="text-white hover:text-[#C6A27E] transition-colors"
                 >
                   Gifting
                 </Link>
@@ -108,7 +110,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/winter-special"
-                  className="text-[#3B2F2F] hover:text-[#C6A27E] transition-colors"
+                  className="text-white hover:text-[#C6A27E] transition-colors"
                 >
                   Winter Special
                 </Link>
@@ -116,7 +118,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/about"
-                  className="text-[#3B2F2F] hover:text-[#C6A27E] transition-colors"
+                  className="text-white hover:text-[#C6A27E] transition-colors"
                 >
                   About Us
                 </Link>
@@ -124,7 +126,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/contact"
-                  className="text-[#3B2F2F] hover:text-[#C6A27E] transition-colors"
+                  className="text-white hover:text-[#C6A27E] transition-colors"
                 >
                   Contact
                 </Link>
@@ -139,9 +141,9 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <SafeIcon
                   icon={FiMapPin}
-                  className="w-5 h-5 text-[#C6A27E] mt-0.5 flex-shrink-0"
+                  className="w-5 h-5 text-white mt-0.5 flex-shrink-0"
                 />
-                <span className="text-[#3B2F2F]">
+                <span className="text-white">
                   123 Artisan Street
                   <br /> Craft District, CD 12345
                 </span>
@@ -149,23 +151,23 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <SafeIcon
                   icon={FiPhone}
-                  className="w-5 h-5 text-[#C6A27E] flex-shrink-0"
+                  className="w-5 h-5 text-white flex-shrink-0"
                 />
-                <span className="text-[#3B2F2F]">+1 (555) 123-4567</span>
+                <span className="text-white">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-3">
                 <SafeIcon
                   icon={FiMail}
-                  className="w-5 h-5 text-[#C6A27E] flex-shrink-0"
+                  className="w-5 h-5 text-white flex-shrink-0"
                 />
-                <span className="text-[#3B2F2F]">hello@sharoma.com</span>
+                <span className="text-white">hello@sharoma.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <SafeIcon
                   icon={FiMessageSquare}
-                  className="w-5 h-5 text-[#C6A27E] flex-shrink-0"
+                  className="w-5 h-5 text-white flex-shrink-0"
                 />
-                <span className="text-[#3B2F2F]">+91-977-9880-180</span>
+                <span className="text-white">+91-977-9880-180</span>
               </div>
             </div>
           </div>
@@ -173,19 +175,19 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-[#3B2F2F]/20 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-[#3B2F2F] text-sm">
+          <p className="text-white text-sm">
             © 2024 Sharoma Candles. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <Link
               to="/privacy"
-              className="text-[#3B2F2F] hover:text-[#C6A27E] text-sm transition-colors"
+              className="text-white hover:text-[#C6A27E] text-sm transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               to="/terms"
-              className="text-[#3B2F2F] hover:text-[#C6A27E] text-sm transition-colors"
+              className="text-white hover:text-[#C6A27E] text-sm transition-colors"
             >
               Terms of Service
             </Link>
