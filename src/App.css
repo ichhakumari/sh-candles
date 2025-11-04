@@ -1,0 +1,197 @@
+@font-face {
+  font-family: 'The Folk';
+  src: url('/fonts/thefolk.woff2') format('woff2'),
+       url('/fonts/thefolk.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ivory: #FAF8F6;
+  --color-white: #FFFFFF;
+  --color-charcoal: #1E1E1E;
+  --color-warm-grey: #5B5B5B;
+  --color-gold: #C5A572;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'The Folk', 'Segoe UI', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'The Folk', 'Segoe UI', Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-warm-grey);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-charcoal);
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease-out;
+}
+
+/* Button animations */
+.btn-hover {
+  transition: all 0.25s ease-out;
+}
+
+.btn-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Image loading animation */
+.img-loading {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Custom utilities */
+.text-serif {
+  font-family: 'The Folk', 'Segoe UI', Arial, sans-serif;
+}
+
+.bg-ivory {
+  background-color: var(--color-ivory);
+}
+
+.bg-charcoal {
+  background-color: var(--color-charcoal);
+}
+
+.bg-gold {
+  background-color: var(--color-gold);
+}
+
+.text-charcoal {
+  color: var(--color-charcoal);
+}
+
+.text-warm-grey {
+  color: var(--color-warm-grey);
+}
+
+.text-gold {
+  color: var(--color-gold);
+}
+
+.border-gold {
+  border-color: var(--color-gold);
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--color-charcoal);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Full width layout adjustments */
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+/* Remove any max-width constraints */
+.max-w-screen-xl, .max-w-screen-2xl, .max-w-7xl, .max-w-6xl {
+  max-width: 100% !important;
+}
+
+/* Ensure sections use full width */
+.w-full {
+  width: 100vw;
+}
+
+/* Remove horizontal padding from sections if needed */
+.py-12, .py-16, .py-20 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.px-4, .px-6, .px-8 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .px-4 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .px-6 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .px-8 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
