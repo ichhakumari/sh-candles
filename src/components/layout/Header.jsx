@@ -59,15 +59,16 @@ const Header = () => {
                 <SafeIcon icon={FiSearch} className="w-6 h-6" />
               </button>
             </div>
-            <div className="flex-shrink-0">
-              <Link to="/">
+           <div className="flex-shrink-0">
+              <a href="#/" className="block">
                 <img
                   src="/asserts/img/logo2.png"
                   alt="Sharoma Logo"
                   className="h-12 w-auto"
                 />
-              </Link>
+              </a>
             </div>
+
             <div className="flex-1 flex justify-end items-center">
               <button
                 onClick={handleWhatsAppClick}
