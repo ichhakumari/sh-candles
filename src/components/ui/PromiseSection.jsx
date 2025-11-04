@@ -49,7 +49,7 @@ const PromiseSection = () => {
         viewport={{ once: true }}
         className="text-center mb-12 lg:mb-16"
       >
-        <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-[#3B2F2F] mb-6">
+        <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-[#3B2F2F] mb-3">
           We Promise
         </h2>
         

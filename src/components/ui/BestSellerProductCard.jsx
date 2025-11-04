@@ -43,25 +43,27 @@ const BestSellerProductCard = ({product}) => {
           <span>Muted</span>
         </div>
       </div>
-      <div className="p-4 flex-grow flex flex-col">
-        <h3 className="text-sm font-semibold text-charcoal mb-2 truncate flex-grow">
+      <div className="p-4 flex-grow text-center flex flex-col">
+        <h3 className="text-base font-semibold text-charcoal mb-2 truncate flex-grow">
           {product.name}
         </h3>
-        <div className="flex items-center mb-3 space-x-2">
+
+        <div className="flex items-center justify-center mb-3 space-x-2 ">
           <span className="text-base font-bold text-charcoal">
             ₹{product.price.toFixed(0)}
           </span>
           {product.originalPrice && (
-            <span className="text-xs text-warm-grey line-through">
+            <span className="text-xs text-warm-grey  line-through ">
               ₹{product.originalPrice.toFixed(0)}
             </span>
           )}
           {product.discount && (
-            <span className="bg-red-500 text-white text-[11px] font-bold px-2 py-0.5 rounded">
+            <span className="bg-red-500  text-white text-[11px] font-bold px-2 py-0.5 rounded ">
               {product.discount}% OFF
             </span>
           )}
         </div>
+
         <div className="mt-auto pt-2">
           <Link to={`/product/${product.id}`}>
             <button className="w-full bg-[#C5B391] text-charcoal font-semibold py-2.5 rounded-lg hover:bg-[#bda881] transition-colors text-sm mb-2">

@@ -22,10 +22,11 @@ const ProductCard = ({ product, compact = false }) => {
   };
 
   return (
-    <motion.div whileHover={{ y: -5 }} className="group">
+    <motion.div whileHover={{ y: -5 }} className="group shadow-md shadow-gray-400/50 hover:shadow-lg hover:shadow-gray-400/60 rounded-lg overflow-hidden bg-white transition-all duration-300">
+    {/* <motion.div whileHover={{ y: -5 }} className="group"> */}
       <Link to={`/product/${product.id}`} className="block">
         {/* Image Container */}
-        <div className="relative overflow-hidden bg-white border border-gray-100 hover:shadow-md transition-all duration-300">
+        <div className="relative overflow-hidden bg-white border border-gray-100 shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/30 transition-all duration-300">
           <img
             src={product.image}
             alt={product.name}
@@ -44,7 +45,7 @@ const ProductCard = ({ product, compact = false }) => {
             </button>
           </div>
         </div>
-
+{/* Top trensing products */}
         {/* Content Container */}
         <div className="pt-4 text-center">
           <h3 className={`${textSize} font-medium text-charcoal mb-2 truncate`}>
@@ -55,7 +56,7 @@ const ProductCard = ({ product, compact = false }) => {
               Rs. {product.price.toFixed(2)}
             </span>
             {product.originalPrice && (
-              <span className="text-sm text-warm-grey line-through">
+              <span className="text-base text-warm-grey line-through">
                 Rs. {product.originalPrice.toFixed(2)}
               </span>
             )}
@@ -65,7 +66,7 @@ const ProductCard = ({ product, compact = false }) => {
       {/* Order and WhatsApp buttons */}
       <div className="mt-3 flex flex-col gap-2">
         <Link to={`/product/${product.id}`}>
-          <button className="w-full bg-charcoal text-white py-2 rounded-md hover:bg-charcoal/90 transition-colors text-sm font-medium">
+          <button className="w-full bg-[#C5B391] text-black py-2 rounded-md hover:bg-[#bda881] transition-colors text-sm font-medium">
             Order Now
           </button>
         </Link>

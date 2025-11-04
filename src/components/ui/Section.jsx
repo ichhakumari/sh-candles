@@ -24,12 +24,12 @@ const Section = ({
     'gifting': 'bg-[#FAE9DC]', // Soft Peach Beige
     'promise': 'bg-[#F6E3D2]', // Warm Sand
     'message': 'bg-[#FDF2E9]', // Light Apricot Cream
-    'trending': 'bg-[#EED6C4]', // Muted Caramel Beige
+    'trending': 'bg-[#FDFBF9]', // white 
     'footer': 'bg-[#E5C9B6]', // Soft Clay
   };
 
   // Added margin bottom for spacing between sections
-  const spacingClass = 'mb-3 lg:mb-4';
+  const spacingClass = 'mb-0 lg:mb-4';
 
   return (
     <section

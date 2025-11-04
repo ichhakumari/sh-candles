@@ -12,6 +12,8 @@ import BestSellerSlider from '../components/ui/BestSellerSlider';
 import CountdownTimer from '../components/ui/CountdownTimer';
 import CategoryCard from '../components/ui/CategoryCard';
 import PromiseSection from '../components/ui/PromiseSection';
+import WhatsAppOrderIllustration from "../components/ui/WhatsAppOrderIllustration";
+
 import { getFeaturedProducts, getBestSellers, getTopDeals, getProductsByCategory } from '../data/products';
 
 const { FiChevronLeft, FiChevronRight } = FiIcons;
@@ -230,7 +232,7 @@ const HomePage = () => {
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-10"
         >
           <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-[#3B2F2F] mb-4">
             Explore Our Categories
@@ -294,25 +296,73 @@ const HomePage = () => {
       </Section>
       
       {/* WhatsApp CTA Section */}
-      <Section background="charcoal">
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-white mb-6">
-            Order Directly on WhatsApp
-          </h2>
-          <p className="text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Skip the checkout process! Connect with us directly on WhatsApp for personalized service,
-            exclusive offers, and quick order processing.
-          </p>
-          <Button variant="secondary" size="lg" onClick={handleWhatsAppCTA}>
-            Start Chat on WhatsApp
-          </Button>
-        </motion.div>
-      </Section>
+      
+        <Section background="bg-green-50" padding ="2px">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-10 items-center"
+          >
+            {/* Left Side - Image */}
+            
+            <motion.div
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="order-2 md:order-1 flex justify-center items-center">
+                 <div className="scale-[0.3] md:scale-90">
+                    <WhatsAppOrderIllustration />
+                  </div>
+            </motion.div>
+           
+
+
+            {/* Right Side - Content */}
+            <motion.div
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="order-1 md:order-2 text-center md:text-left"
+            >
+              <h2 className="text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-4 leading-tight">
+                  Order Directly on{' '}
+                  <span className="text-green-600 block mt-2">WhatsApp</span>
+                </h2>
+
+                <p className="text-gray-700 text-lg lg:text-xl max-w-xl mx-auto md:mx-0 mb-8 leading-relaxed">
+                  Skip the checkout hassle! Chat with us for quick{' '}
+                  <span className="font-semibold text-green-700">candle orders</span>,{' '}
+                  <span className="font-semibold text-green-700">custom scents</span>, or{' '}
+                  <span className="font-semibold text-green-700">gift sets</span> — all made from{' '}
+                  <span className="font-semibold text-green-700">eco-friendly soy wax</span> and{' '}
+                  <span className="font-semibold text-green-700">100% vegan ingredients</span>.
+                </p>
+
+                <p className="text-gray-700 text-lg lg:text-xl max-w-xl mx-auto md:mx-0 mb-8 leading-relaxed">
+                  ✨ Enjoy <span className="font-semibold text-green-700">personalized recommendations</span>,{' '}
+                  <span className="font-semibold text-green-700">exclusive offers</span>, and{' '}
+                  <span className="font-semibold text-green-700">fast responses</span> — all in one chat.
+                </p>
+
+                <Button
+                  variant="primary"
+                  size="lg"
+                  onClick={handleWhatsAppCTA}
+                  className="bg-green-600 hover:bg-green-700"
+                >
+                  Start Chat on WhatsApp
+                </Button>
+
+                <p className="text-sm text-gray-600 mt-6">
+                  💬 Real-time support • 🌱 Vegan & cruelty-free • 🎁 Custom-made for you
+                </p>
+
+            </motion.div>
+          </motion.div>
+        </Section>
       
       {/* Jai Guruji Feature Block */}
       <Section background="message">
