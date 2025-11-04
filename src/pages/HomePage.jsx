@@ -297,74 +297,90 @@ const HomePage = () => {
       
       {/* WhatsApp CTA Section */}
       
-        <Section background="bg-green-50" padding ="2px">
+      <Section background="bg-green-50" padding="2px">
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center px-3 sm:px-6 lg:px-10 py-8"
+        >
+          {/* Left Side - Illustration (responsive scale, aspect, alignment) */}
           <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-10 items-center"
+            transition={{ delay: 0.2 }}
+            className="order-2 md:order-1 w-full flex justify-center items-center mb-8 md:mb-0"
           >
-            {/* Left Side - Image */}
-            
-            <motion.div
-                initial={{ x: -50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="order-2 md:order-1 flex justify-center items-center">
-                 <div className="scale-[0.3] md:scale-90">
-                    <WhatsAppOrderIllustration />
-                  </div>
-            </motion.div>
-           
-
-
-            {/* Right Side - Content */}
-            <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="order-1 md:order-2 text-center md:text-left"
-            >
-              <h2 className="text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-4 leading-tight">
-                  Order Directly on{' '}
-                  <span className="text-green-600 block mt-2">WhatsApp</span>
-                </h2>
-
-                <p className="text-gray-700 text-lg lg:text-xl max-w-xl mx-auto md:mx-0 mb-8 leading-relaxed">
-                  Skip the checkout hassle! Chat with us for quick{' '}
-                  <span className="font-semibold text-green-700">candle orders</span>,{' '}
-                  <span className="font-semibold text-green-700">custom scents</span>, or{' '}
-                  <span className="font-semibold text-green-700">gift sets</span> — all made from{' '}
-                  <span className="font-semibold text-green-700">eco-friendly soy wax</span> and{' '}
-                  <span className="font-semibold text-green-700">100% vegan ingredients</span>.
-                </p>
-
-                <p className="text-gray-700 text-lg lg:text-xl max-w-xl mx-auto md:mx-0 mb-8 leading-relaxed">
-                  ✨ Enjoy <span className="font-semibold text-green-700">personalized recommendations</span>,{' '}
-                  <span className="font-semibold text-green-700">exclusive offers</span>, and{' '}
-                  <span className="font-semibold text-green-700">fast responses</span> — all in one chat.
-                </p>
-
-                <Button
-                  variant="primary"
-                  size="lg"
-                  onClick={handleWhatsAppCTA}
-                  className="bg-green-600 hover:bg-green-700"
-                >
-                  Start Chat on WhatsApp
-                </Button>
-
-                <p className="text-sm text-gray-600 mt-6">
-                  💬 Real-time support • 🌱 Vegan & cruelty-free • 🎁 Custom-made for you
-                </p>
-
-            </motion.div>
+            <div className="w-full max-w-[340px] sm:max-w-[400px] md:max-w-[420px] lg:max-w-[480px] xl:max-w-[540px] aspect-square">
+              <WhatsAppOrderIllustration />
+            </div>
           </motion.div>
-        </Section>
+
+          {/* Right Side - Content */}
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="order-1 md:order-2 text-center md:text-left"
+          >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-4 leading-tight">
+              Order Directly on{' '}
+              <span className="text-green-600 block mt-2">WhatsApp</span>
+            </h2>
+            <p className="text-gray-700 text-base sm:text-lg lg:text-xl max-w-xl mx-auto md:mx-0 mb-8 leading-relaxed">
+              Skip the checkout hassle! Chat with us for quick{' '}
+              <span className="font-semibold text-green-700">candle orders</span>,{' '}
+              <span className="font-semibold text-green-700">custom scents</span>, or{' '}
+              <span className="font-semibold text-green-700">gift sets</span> — all made from{' '}
+              <span className="font-semibold text-green-700">eco-friendly soy wax</span> and{' '}
+              <span className="font-semibold text-green-700">100% vegan ingredients</span>.
+            </p>
+            <p className="text-gray-700 text-base sm:text-lg lg:text-xl max-w-xl mx-auto md:mx-0 mb-8 leading-relaxed">
+              ✨ Enjoy <span className="font-semibold text-green-700">personalized recommendations</span>,{' '}
+              <span className="font-semibold text-green-700">exclusive offers</span>, and{' '}
+              <span className="font-semibold text-green-700">fast responses</span> — all in one chat.
+            </p>
+            <Button
+              variant="primary"
+              size="lg"
+              onClick={handleWhatsAppCTA}
+              className="bg-green-600 hover:bg-green-700 w-full md:w-auto"
+            >
+              Start Chat on WhatsApp
+            </Button>
+            <p className="text-sm text-gray-600 mt-6">
+              💬 Real-time support • 🌱 Vegan & cruelty-free • 🎁 Custom-made for you
+            </p>
+          </motion.div>
+        </motion.div>
+      </Section>
+
       
-      {/* Jai Guruji Feature Block */}
+     
+      
+      {/* Best Sellers */}
+      <Section background="white">
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-[#3B2F2F] mb-4">
+            Order Our Best Sellers
+          </h2>
+          <p className="text-[#6E5A4A] max-w-2xl mx-auto">
+            Experience our premium candles
+          </p>
+        </motion.div>
+        
+        <BestSellerSlider products={bestSellers} />
+      </Section>
+
+
+       {/* Jai Guruji Feature Block */}
       <Section background="message">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -409,24 +425,6 @@ const HomePage = () => {
         </div>
       </Section>
       
-      {/* Best Sellers */}
-      <Section background="white">
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-[#3B2F2F] mb-4">
-            Order Our Best Sellers
-          </h2>
-          <p className="text-[#6E5A4A] max-w-2xl mx-auto">
-            Experience our premium candles
-          </p>
-        </motion.div>
-        
-        <BestSellerSlider products={bestSellers} />
-      </Section>
       
       {/* Top Deals */}
       <Section background="trending">

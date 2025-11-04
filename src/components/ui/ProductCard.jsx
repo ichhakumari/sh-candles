@@ -64,7 +64,7 @@ const ProductCard = ({ product, compact = false }) => {
         </div>
       </Link>
       {/* Order and WhatsApp buttons */}
-      <div className="mt-3 flex flex-col gap-2">
+      <div className="mt-3 flex flex-col gap-2 px-4 pb-4">
         <Link to={`/product/${product.id}`}>
           <button className="w-full bg-[#C5B391] text-black py-2 rounded-md hover:bg-[#bda881] transition-colors text-sm font-medium">
             Order Now
@@ -78,6 +78,8 @@ const ProductCard = ({ product, compact = false }) => {
           <span>Order on WhatsApp</span>
         </button>
       </div>
+
+
     </motion.div>
   );
 };
