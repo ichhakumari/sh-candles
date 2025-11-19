@@ -306,7 +306,7 @@ const HomePage = () => {
 
 
       {/* Best Sellers */}
-      <Section background="invy">
+      <Section background="gifting">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -325,7 +325,7 @@ const HomePage = () => {
       </Section>
 
       {/* Jai Guruji Feature Block */}
-      <Section background="message">
+      <Section background="winter-special">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ x: -50, opacity: 0 }}

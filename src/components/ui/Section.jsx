@@ -13,7 +13,7 @@ const Section = ({
     lg: 'py-8 lg:py-10',
     none: '',
   };
-  
+
   const backgroundClasses = {
     transparent: '',
     white: 'bg-white',
@@ -24,7 +24,8 @@ const Section = ({
     'gifting': 'bg-[#FAE9DC]', // Soft Peach Beige
     'promise': 'bg-[#F6E3D2]', // Warm Sand
     'message': 'bg-[#FDF2E9]', // Light Apricot Cream
-    'trending': 'bg-[#FDFBF9]', // white 
+    'trending': 'bg-[#FFF5ED]', // white [#FDFBF9]
+    'winter-special': 'bg-[#FDFBF9]', // white [#FDFBF9]
     'footer': 'bg-[#E5C9B6]', // Soft Clay
   };
 
