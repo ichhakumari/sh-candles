@@ -256,7 +256,7 @@ const HomePage = () => {
 
       {/* Winter Special */}
 
-      <Section background="trending">
+      <Section background="winter-special">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
