@@ -6,7 +6,7 @@ import * as SiIcons from 'react-icons/si';
 import SafeIcon from '../common/SafeIcon';
 import Section from '../components/ui/Section';
 
-const { FiMail, FiPhone, FiMapPin, FiClock, FiMessageSquare, FiExternalLink } = FiIcons;
+const { FiMail, FiPhone, FiMapPin, FiClock, FiMessageSquare, FiExternalLink, FiArrowUpRight } = FiIcons;
 const { FaFacebook, FaTwitter, FaPinterest, FaTiktok } = FaIcons;
 const { SiTumblrc } = SiIcons;
 
@@ -31,6 +31,10 @@ const ContactPage = () => {
     window.open('mailto:sharomacandles.shop@gmail.com', '_blank');
   };
 
+  const handleDirectionsClick = () => {
+    window.open('https://www.google.com/maps/search/?api=1&query=268+St,+South+New+York,+NY+98944', '_blank');
+  };
+
   const socialLinks = [
     { icon: FaFacebook, url: '#', label: 'Facebook', color: 'hover:text-blue-600' },
     { icon: FaTwitter, url: '#', label: 'Twitter', color: 'hover:text-blue-400' },
@@ -44,10 +48,100 @@ const ContactPage = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="pt-16 lg:pt-32"
+      className="pt-32 lg:pt-40"
     >
+      {/* Header */}
+      <div className="text-center mb-16 px-4">
+        <h1 className="text-4xl lg:text-6xl font-serif font-medium tracking-wide text-charcoal mb-4">Contact Us</h1>
+        <p className="text-warm-grey text-lg max-w-2xl mx-auto">
+          We'd love to hear from you. Visit our store or reach out to us directly.
+        </p>
+      </div>
+
+      <Section background="ivory" className="!py-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-8 mb-16 relative z-10 px-4 max-w-7xl mx-auto">
+
+          {/* Location Card */}
+          <motion.div
+            whileHover={{ y: -5 }}
+            className="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center text-center h-full"
+          >
+            <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mb-6 text-gold">
+              <SafeIcon icon={FiMapPin} className="w-8 h-8" />
+            </div>
+            <h3 className="text-2xl font-serif font-medium text-charcoal mb-4">Our Store</h3>
+            <p className="text-warm-grey mb-8 flex-grow">
+              268 St, South New York<br />
+              NY 98944, United States
+            </p>
+            <button
+              onClick={handleDirectionsClick}
+              className="flex items-center space-x-2 text-gold font-medium hover:text-charcoal transition-colors group"
+            >
+              <span>Get Directions</span>
+              <SafeIcon icon={FiArrowUpRight} className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </button>
+          </motion.div>
+
+          {/* Contact Info Card */}
+          <motion.div
+            whileHover={{ y: -5 }}
+            className="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center text-center h-full"
+          >
+            <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mb-6 text-gold">
+              <SafeIcon icon={FiPhone} className="w-8 h-8" />
+            </div>
+            <h3 className="text-2xl font-serif font-medium text-charcoal mb-4">Contact Info</h3>
+            <div className="text-warm-grey mb-8 flex-grow space-y-4">
+              <div>
+                <p className="text-sm text-gray-400 uppercase tracking-wider mb-1">Phone</p>
+                <p className="font-medium text-charcoal">+91 779 988 0180</p>
+                <p className="font-medium text-charcoal">(+100) 666-456-7890</p>
+              </div>
+              <div>
+                <p className="text-sm text-gray-400 uppercase tracking-wider mb-1">Email</p>
+                <p className="font-medium text-charcoal">sharomacandles.shop@gmail.com</p>
+              </div>
+            </div>
+            <div className="flex space-x-4 mt-auto">
+              {socialLinks.slice(0, 3).map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  className={`text-warm-grey hover:text-gold transition-colors`}
+                >
+                  <SafeIcon icon={social.icon} className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Opening Hours Card */}
+          <motion.div
+            whileHover={{ y: -5 }}
+            className="bg-white p-8 rounded-xl shadow-lg flex flex-col items-center text-center h-full"
+          >
+            <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mb-6 text-gold">
+              <SafeIcon icon={FiClock} className="w-8 h-8" />
+            </div>
+            <h3 className="text-2xl font-serif font-medium text-charcoal mb-4">Opening Hours</h3>
+            <div className="text-warm-grey mb-8 flex-grow space-y-2">
+              <p><span className="font-medium text-charcoal">Mon – Fri:</span> 9:00 – 20:00</p>
+              <p><span className="font-medium text-charcoal">Saturday:</span> 11:00 – 15:00</p>
+              <p><span className="font-medium text-charcoal">Sunday:</span> Closed</p>
+            </div>
+            <div className="mt-auto">
+              <span className="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
+                Open Now
+              </span>
+            </div>
+          </motion.div>
+
+        </div>
+      </Section>
+
       {/* Map Section */}
-      <section className="relative w-full h-[400px] lg:h-[500px] overflow-hidden">
+      <section className="w-full h-[300px] sm:h-[400px] lg:h-[500px] bg-gray-100">
         {mapLoaded ? (
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316bb4b4c7%3A0x4b5c5b5b5b5b5b5b!2s268%20St%2C%20South%20New%20York%2C%20NY%2098944!5e0!3m2!1sen!2sus!4v1234567890"
@@ -58,187 +152,22 @@ const ContactPage = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="Sharoma Candles Location"
-            className="w-full h-full"
+            className="w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
           />
         ) : (
-          <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-            <div className="text-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gold mx-auto mb-4"></div>
-              <p className="text-warm-grey">Loading map...</p>
-            </div>
+          <div className="w-full h-full flex items-center justify-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gold"></div>
           </div>
         )}
       </section>
 
-      {/* Contact Section */}
-      <Section background="ivory">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left Column - Reach Us */}
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-8"
-          >
-            <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-charcoal mb-8">
-              Reach Us
-            </h2>
-            
-            {/* Email */}
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-              onClick={handleEmailClick}
-            >
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <SafeIcon icon={FiMail} className="w-6 h-6 text-gold" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-charcoal mb-1">Email</h3>
-                  <p className="text-charcoal hover:text-gold transition-colors">
-                    sharomacandles.shop@gmail.com
-                  </p>
-                  <p className="text-sm text-warm-grey mt-1">Click to send us an email</p>
-                </div>
-                <SafeIcon icon={FiExternalLink} className="w-4 h-4 text-warm-grey ml-auto" />
-              </div>
-            </motion.div>
-
-            {/* WhatsApp/Phone */}
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer"
-              onClick={handleWhatsAppClick}
-            >
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <SafeIcon icon={FiMessageSquare} className="w-6 h-6 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-charcoal mb-1">WhatsApp / Phone</h3>
-                  <p className="text-charcoal hover:text-green-600 transition-colors">
-                    +91-977-9880-180
-                  </p>
-                  <p className="text-sm text-warm-grey mt-1">Click to start WhatsApp chat</p>
-                </div>
-                <SafeIcon icon={FiExternalLink} className="w-4 h-4 text-warm-grey ml-auto" />
-              </div>
-            </motion.div>
-          </motion.div>
-
-          {/* Right Column - Contact Information */}
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-8"
-          >
-            <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-charcoal mb-8">
-              Contact Information
-            </h2>
-
-            {/* Location */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <SafeIcon icon={FiMapPin} className="w-6 h-6 text-gold" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-charcoal mb-2">Location Store</h3>
-                  <p className="text-warm-grey leading-relaxed">
-                    268 St, South New York<br />
-                    NY 98944, United States
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Work Time */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <SafeIcon icon={FiClock} className="w-6 h-6 text-gold" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-charcoal mb-2">Work Time</h3>
-                  <div className="space-y-1 text-warm-grey">
-                    <p>Monday – Friday: <span className="font-medium text-charcoal">9:00 – 20:00</span></p>
-                    <p>Saturday: <span className="font-medium text-charcoal">11:00 – 15:00</span></p>
-                    <p>Sunday: <span className="font-medium text-charcoal">Closed</span></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Phone Numbers */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <SafeIcon icon={FiPhone} className="w-6 h-6 text-gold" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-charcoal mb-2">Phone Number</h3>
-                  <div className="space-y-1 text-warm-grey">
-                    <p>+91 779 988 0180</p>
-                    <p>(+100) 666-456-7890</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Email Addresses */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <SafeIcon icon={FiMail} className="w-6 h-6 text-gold" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-charcoal mb-2">Email Address</h3>
-                  <div className="space-y-1 text-warm-grey">
-                    <p>sharomacandles.shop@gmail.com</p>
-                    <p>aloshopify@alothemes.com</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Social Accounts */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="font-semibold text-charcoal mb-4">Social Accounts</h3>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-warm-grey transition-all duration-300 ${social.color} hover:scale-110`}
-                    aria-label={social.label}
-                  >
-                    <SafeIcon icon={social.icon} className="w-5 h-5" />
-                  </a>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </Section>
-
-      {/* Quick Contact CTA */}
-      <Section background="charcoal">
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-white mb-6">
+      {/* Quick Assistance */}
+      <Section background="charcoal" className="py-20">
+        <div className="text-center max-w-4xl mx-auto px-4">
+          <h2 className="text-4xl lg:text-5xl font-serif font-medium tracking-wide text-white mb-6">
             Need Quick Assistance?
           </h2>
-          <p className="text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-white/80 text-lg mb-10 leading-relaxed">
             Reach out to us directly via WhatsApp for the fastest response. Our team is ready to help you with orders, product information, and any questions you may have.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -257,7 +186,7 @@ const ContactPage = () => {
               <span>Send Email</span>
             </button>
           </div>
-        </motion.div>
+        </div>
       </Section>
     </motion.div>
   );

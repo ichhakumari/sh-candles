@@ -23,7 +23,7 @@ const ProductCard = ({ product, compact = false }) => {
 
   return (
     <motion.div whileHover={{ y: -5 }} className="group shadow-md shadow-gray-400/50 hover:shadow-lg hover:shadow-gray-400/60 rounded-lg overflow-hidden bg-white transition-all duration-300">
-    {/* <motion.div whileHover={{ y: -5 }} className="group"> */}
+      {/* <motion.div whileHover={{ y: -5 }} className="group"> */}
       <Link to={`/product/${product.id}`} className="block">
         {/* Image Container */}
         <div className="relative overflow-hidden bg-white border border-gray-100 shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/30 transition-all duration-300">
@@ -45,10 +45,10 @@ const ProductCard = ({ product, compact = false }) => {
             </button>
           </div>
         </div>
-{/* Top trensing products */}
+        {/* Top trending products */}
         {/* Content Container */}
         <div className="pt-4 text-center">
-          <h3 className={`${textSize} font-medium text-charcoal mb-2 truncate`}>
+          <h3 className={`${textSize} font-medium text-charcoal mb-2 line-clamp-2 min-h-[2.5em]`}>
             {product.name}
           </h3>
           <div className="flex justify-center items-baseline space-x-2 mb-2">

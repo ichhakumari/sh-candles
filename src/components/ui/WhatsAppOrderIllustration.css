@@ -26,7 +26,7 @@
 }
 
 /* Candle floating */
-.candle-decoration {
+/* .candle-decoration {
   position: absolute;
   font-size: 60px;
   animation: float 3s ease-in-out infinite;
@@ -45,7 +45,7 @@
   top: 40%;
   left: 0%;
   animation-delay: 2s;
-}
+} */
 
 /* WhatsApp icon */
 .whatsapp-icon {

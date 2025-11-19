@@ -29,7 +29,7 @@ const Section = ({
   };
 
   // Added margin bottom for spacing between sections
-  const spacingClass = 'mb-0 lg:mb-4';
+  const spacingClass = 'mb-0 lg:mb-0';
 
   return (
     <section

@@ -18,7 +18,7 @@ const CategoryCard = ({ title, link, image }) => {
         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300" />
         <div className="absolute bottom-4 right-4">
           <h3
-            className="text-white text-lg font-semibold tracking-wider uppercase"
+            className="text-white text-lg font-semibold tracking-wider"
             style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}
           >
             {title}

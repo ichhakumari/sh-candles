@@ -24,7 +24,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-black text-white">
-     {/* <footer className="bg-[#E5C9B6] text-[#3B2F2F]"> */}
+      {/* <footer className="bg-[#E5C9B6] text-[#3B2F2F]"> */}
       <div className="w-full px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand & Newsletter */}
@@ -33,7 +33,7 @@ const Footer = () => {
               {/* <h2 className="text-3xl font-serif font-semibold text-white">
                 Sharoma
               </h2> */}
-              <img src='/asserts/img/logobg.png' alt = "logo"  className="w-48 md:w-40 lg:w-44 h-auto mx-auto"></img>
+              <img src='/asserts/img/logobg.png' alt="logo" className="w-48 md:w-40 lg:w-44 h-auto mx-auto"></img>
             </Link>
             <p className="text-white mb-6 max-w-md leading-relaxed">
               Crafting premium candles that transform spaces into sanctuaries of
@@ -144,8 +144,8 @@ const Footer = () => {
                   className="w-5 h-5 text-white mt-0.5 flex-shrink-0"
                 />
                 <span className="text-white">
-                  123 Artisan Street
-                  <br /> Craft District, CD 12345
+                  268 St, South New York
+                  <br /> NY 98944, United States
                 </span>
               </div>
               <div className="flex items-center space-x-3">
@@ -153,21 +153,21 @@ const Footer = () => {
                   icon={FiPhone}
                   className="w-5 h-5 text-white flex-shrink-0"
                 />
-                <span className="text-white">+1 (555) 123-4567</span>
+                <span className="text-white">+91 779 988 0180</span>
               </div>
               <div className="flex items-center space-x-3">
                 <SafeIcon
                   icon={FiMail}
                   className="w-5 h-5 text-white flex-shrink-0"
                 />
-                <span className="text-white">hello@sharoma.com</span>
+                <span className="text-white">sharomacandles.shop@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <SafeIcon
                   icon={FiMessageSquare}
                   className="w-5 h-5 text-white flex-shrink-0"
                 />
-                <span className="text-white">+91-977-9880-180</span>
+                <span className="text-white">(+100) 666-456-7890</span>
               </div>
             </div>
           </div>

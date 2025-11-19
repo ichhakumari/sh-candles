@@ -16,6 +16,8 @@ const {
   FiBell,
   FiMessageSquare,
   FiCloudSnow,
+  FiInfo,
+  FiPhone,
 } = FiIcons;
 const { FaPrayingHands } = FaIcons;
 
@@ -25,11 +27,13 @@ const Header = () => {
 
   const navigation = [
     { name: 'Home', href: '/', icon: FiHome },
-    { name: 'Jai Guruji', href: '/collection/jai-guruji', icon: FaPrayingHands },
-    { name: 'Gifting Candles', href: '/collection/gifting', icon: FiGift },
-    { name: 'Summer Special', href: '/collection/summer-special', icon: FiSun },
-    { name: 'Winter Special', href: '/winter-special', icon: FiCloudSnow },
-    { name: 'Trending Candles', href: '/collection/trending', icon: FiTrendingUp },
+    { name: 'About Us', href: '/about', icon: FiInfo },
+    { name: 'Contact', href: '/contact', icon: FiPhone },
+    // { name: 'Jai Guruji', href: '/collection/jai-guruji', icon: FaPrayingHands },
+    // { name: 'Gifting Candles', href: '/collection/gifting', icon: FiGift },
+    // { name: 'Summer Special', href: '/collection/summer-special', icon: FiSun },
+    // { name: 'Winter Special', href: '/winter-special', icon: FiCloudSnow },
+    // { name: 'Trending Candles', href: '/collection/trending', icon: FiTrendingUp },
   ];
 
   useEffect(() => {
@@ -52,14 +56,9 @@ const Header = () => {
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex-1 flex justify-start">
-              <button
-                className="p-2 text-charcoal hover:text-gold transition-colors"
-                aria-label="Search"
-              >
-                <SafeIcon icon={FiSearch} className="w-6 h-6" />
-              </button>
+              {/* Search removed */}
             </div>
-           <div className="flex-shrink-0">
+            <div className="flex-shrink-0">
               <a href="#/" className="block">
                 <img
                   src="/asserts/img/logo2.png"
@@ -92,11 +91,10 @@ const Header = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`flex items-center space-x-2 text-sm font-medium transition-colors hover:text-gold ${
-                      location.pathname === item.href
-                        ? 'text-gold'
-                        : 'text-charcoal'
-                    }`}
+                    className={`flex items-center space-x-2 text-sm font-medium transition-colors hover:text-gold ${location.pathname === item.href
+                      ? 'text-gold'
+                      : 'text-charcoal'
+                      }`}
                   >
                     <SafeIcon icon={item.icon} className="w-4 h-4" />
                     <span>{item.name}</span>
@@ -154,11 +152,10 @@ const Header = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`flex items-center space-x-3 text-base font-medium transition-colors hover:text-gold ${
-                      location.pathname === item.href
-                        ? 'text-gold'
-                        : 'text-charcoal'
-                    }`}
+                    className={`flex items-center space-x-3 text-base font-medium transition-colors hover:text-gold ${location.pathname === item.href
+                      ? 'text-gold'
+                      : 'text-charcoal'
+                      }`}
                   >
                     <SafeIcon icon={item.icon} className="w-5 h-5" />
                     <span>{item.name}</span>

@@ -14,7 +14,7 @@ export default {
       },
       fontFamily: {
         'sans': ['Inter', 'sans-serif'],
-        'serif': ['Cormorant Garamond', 'serif'],
+        'serif': ['The Folk', 'Cormorant Garamond', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',

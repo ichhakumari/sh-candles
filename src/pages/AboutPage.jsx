@@ -1,8 +1,9 @@
 import React from 'react';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import TestimonialSlider from '../components/ui/TestimonialSlider';
 
 const AboutPage = () => {
   const values = [
@@ -20,6 +21,39 @@ const AboutPage = () => {
       title: "Sustainable Practices",
       description: "We're committed to environmental responsibility, using eco-friendly materials and sustainable packaging.",
       image: "/asserts/img/12.png"
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Mitchell",
+      location: "New York, NY",
+      text: "The Jai Guruji candles have transformed my meditation practice. The scents are divine and truly help me focus.",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      name: "David Chen",
+      location: "San Francisco, CA",
+      text: "I ordered the Winter Special collection as a gift, and the packaging was stunning. The candles smell absolutely amazing!",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      name: "Maria Rodriguez",
+      location: "Austin, TX",
+      text: "Sharoma candles are my go-to for home fragrance. They burn so cleanly and the scents last for hours.",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      name: "James Wilson",
+      location: "London, UK",
+      text: "The customer service is exceptional. I had a question about shipping and they responded immediately via WhatsApp.",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      name: "Emma Thompson",
+      location: "Sydney, AU",
+      text: "I love that these candles are vegan and eco-friendly. It's hard to find luxury candles that align with my values.",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
     }
   ];
 
@@ -58,11 +92,11 @@ const AboutPage = () => {
       className="pt-16 lg:pt-32"
     >
       {/* Hero Section */}
-      <section className="relative h-[60vh] overflow-hidden">
-        <img 
-          src="https://images.unsplash.com/photo-1602874801006-af7add90a439?w=1200&h=600&fit=crop" 
-          alt="About Sharoma" 
-          className="w-full h-full object-cover" 
+      <section className="relative h-[50vh] sm:h-[60vh] overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1602874801006-af7add90a439?w=1200&h=600&fit=crop"
+          alt="About Sharoma"
+          className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center">
@@ -72,7 +106,7 @@ const AboutPage = () => {
             transition={{ delay: 0.3 }}
             className="text-center max-w-4xl mx-auto px-4"
           >
-            <h1 className="text-4xl lg:text-6xl font-serif font-semibold text-white mb-6">
+            <h1 className="text-4xl lg:text-6xl font-serif font-medium tracking-wide text-white mb-6">
               Our Story
             </h1>
             <p className="text-xl lg:text-2xl text-white/90">
@@ -91,7 +125,7 @@ const AboutPage = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-charcoal">
+            <h2 className="text-4xl lg:text-5xl font-serif font-medium tracking-wide text-charcoal">
               Born from Passion
             </h2>
             <p className="text-warm-grey leading-relaxed">
@@ -109,10 +143,10 @@ const AboutPage = () => {
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
           >
-            <img 
-              src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&h=500&fit=crop" 
-              alt="Candle making process" 
-              className="w-full h-96 object-cover rounded-lg shadow-lg" 
+            <img
+              src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&h=500&fit=crop"
+              alt="Candle making process"
+              className="w-full h-96 object-cover rounded-lg shadow-lg"
             />
           </motion.div>
         </div>
@@ -126,7 +160,7 @@ const AboutPage = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-charcoal mb-4">
+          <h2 className="text-4xl lg:text-5xl font-serif font-medium tracking-wide text-charcoal mb-4">
             Our Values
           </h2>
           <p className="text-warm-grey max-w-2xl mx-auto">
@@ -143,10 +177,10 @@ const AboutPage = () => {
               transition={{ delay: index * 0.2 }}
               className="text-center"
             >
-              <img 
-                src={value.image} 
-                alt={value.title} 
-                className="w-full h-48 object-cover rounded-lg mb-6" 
+              <img
+                src={value.image}
+                alt={value.title}
+                className="w-full h-48 object-cover rounded-lg mb-6"
               />
               <h3 className="text-xl font-semibold text-charcoal mb-3">
                 {value.title}
@@ -159,48 +193,22 @@ const AboutPage = () => {
         </div>
       </Section>
 
-      {/* Team Section */}
-      <Section>
+      {/* Reviews Section */}
+      <Section background="ivory">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-charcoal mb-4">
-            Meet Our Team
+          <h2 className="text-4xl lg:text-5xl font-serif font-medium tracking-wide text-charcoal mb-4">
+            Hear From Our Clients
           </h2>
           <p className="text-warm-grey max-w-2xl mx-auto">
-            The passionate artisans behind every Sharoma candle, dedicated to bringing you exceptional quality and service.
+            Discover why candle lovers around the world choose Sharoma to illuminate their homes and hearts.
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {team.map((member, index) => (
-            <motion.div
-              key={index}
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              className="bg-white p-8 rounded-lg shadow-md text-center"
-            >
-              <img 
-                src={member.image} 
-                alt={member.name} 
-                className="w-24 h-24 rounded-full mx-auto mb-4 object-cover" 
-              />
-              <h3 className="text-xl font-semibold text-charcoal mb-1">
-                {member.name}
-              </h3>
-              <p className="text-gold font-medium mb-4">
-                {member.role}
-              </p>
-              <p className="text-warm-grey text-sm leading-relaxed">
-                {member.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+        <TestimonialSlider testimonials={testimonials} />
       </Section>
 
       {/* CTA Section */}
@@ -211,7 +219,7 @@ const AboutPage = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-3xl lg:text-4xl font-serif font-semibold text-white mb-6">
+          <h2 className="text-4xl lg:text-5xl font-serif font-medium tracking-wide text-white mb-6">
             Experience the Sharoma Difference
           </h2>
           <p className="text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed">
@@ -223,7 +231,12 @@ const AboutPage = () => {
                 Order Our Collection
               </Button>
             </Link>
-            <Button variant="outline" size="lg" onClick={handleWhatsAppClick}>
+            <Button
+              variant="primary"
+              size="lg"
+              onClick={handleWhatsAppClick}
+              className="bg-green-600 hover:bg-green-700 text-white border-none"
+            >
               WhatsApp Support
             </Button>
           </div>
