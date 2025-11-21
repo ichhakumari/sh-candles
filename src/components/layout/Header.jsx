@@ -27,13 +27,13 @@ const Header = () => {
 
   const navigation = [
     { name: 'Home', href: '/', icon: FiHome },
+    { name: 'Jai Guruji', href: '/collection/jai-guruji', icon: FaPrayingHands },
+    { name: 'Gifting Candles', href: '/collection/gifting', icon: FiGift },
+    { name: 'Summer Special', href: '/collection/summer-special', icon: FiSun },
+    { name: 'Winter Special', href: '/winter-special', icon: FiCloudSnow },
+    { name: 'Trending Candles', href: '/collection/trending', icon: FiTrendingUp },
     { name: 'About Us', href: '/about', icon: FiInfo },
     { name: 'Contact', href: '/contact', icon: FiPhone },
-    // { name: 'Jai Guruji', href: '/collection/jai-guruji', icon: FaPrayingHands },
-    // { name: 'Gifting Candles', href: '/collection/gifting', icon: FiGift },
-    // { name: 'Summer Special', href: '/collection/summer-special', icon: FiSun },
-    // { name: 'Winter Special', href: '/winter-special', icon: FiCloudSnow },
-    // { name: 'Trending Candles', href: '/collection/trending', icon: FiTrendingUp },
   ];
 
   useEffect(() => {
@@ -61,7 +61,7 @@ const Header = () => {
             <div className="flex-shrink-0">
               <a href="#/" className="block">
                 <img
-                  src="/asserts/img/logo2.png"
+                  src="/asserts/img/logo_black.png"
                   alt="Sharoma Logo"
                   className="h-12 w-auto"
                 />
@@ -75,8 +75,8 @@ const Header = () => {
               >
                 <SafeIcon icon={FiMessageSquare} className="w-7 h-7" />
                 <div className="text-sm">
-                  <p className="font-medium">WhatsApp</p>
-                  <p className="text-warm-grey group-hover:text-gold">Order Now</p>
+                  <p className="font-medium">Order on</p>
+                  <p className="text-warm-grey group-hover:text-gold">WhatsApp</p>
                 </div>
               </button>
             </div>
@@ -101,12 +101,12 @@ const Header = () => {
                   </Link>
                 ))}
               </nav>
-              <div className="flex items-center space-x-2 text-sm text-warm-grey">
+              {/* <div className="flex items-center space-x-2 text-sm text-warm-grey">
                 <SafeIcon icon={FiBell} className="w-4 h-4 text-charcoal" />
                 <span className="font-medium text-charcoal">
                   Reach Us: +91-977-9880-180
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@ const Header = () => {
             </button>
             <Link to="/">
               <img
-                src="https://i.ibb.co/7j5j1sM/sharoma-logo-line-art.png"
+                src="/asserts/img/logo_black.png"
                 alt="Sharoma Logo"
                 className="h-10 w-auto"
               />

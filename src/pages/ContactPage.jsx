@@ -162,12 +162,12 @@ const ContactPage = () => {
       </section>
 
       {/* Quick Assistance */}
-      <Section background="charcoal" className="py-20">
+      <Section background="white" className="py-20">
         <div className="text-center max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl lg:text-5xl font-serif font-medium tracking-wide text-white mb-6">
+          <h2 className="text-4xl lg:text-5xl font-serif font-medium tracking-wide text-charcoal mb-6">
             Need Quick Assistance?
           </h2>
-          <p className="text-white/80 text-lg mb-10 leading-relaxed">
+          <p className="text-charcoal/80 text-lg mb-10 leading-relaxed">
             Reach out to us directly via WhatsApp for the fastest response. Our team is ready to help you with orders, product information, and any questions you may have.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
