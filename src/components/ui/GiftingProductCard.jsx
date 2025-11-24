@@ -1,11 +1,11 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import SafeIcon from '../../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 
-const {FiHeart, FiLayers, FiEye, FiCheck, FiMessageSquare} = FiIcons;
+const { FiHeart, FiLayers, FiEye, FiCheck, FiMessageSquare } = FiIcons;
 
-const GiftingProductCard = ({product}) => {
+const GiftingProductCard = ({ product }) => {
   const handleWhatsAppClick = () => {
     const phoneNumber = '+919779880180';
     const message = encodeURIComponent(`Hi! I'd like to order ${product.name}. Please let me know availability and pricing details.`);
@@ -16,11 +16,11 @@ const GiftingProductCard = ({product}) => {
     <div className="group text-center">
       <div className="relative overflow-hidden bg-white border border-gray-100">
         <Link to={`/product/${product.id}`} className="block">
-          <img 
-            src={product.image} 
-            alt={product.name} 
-            className="w-full aspect-square object-cover" 
-            loading="lazy" 
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full aspect-square object-cover"
+            loading="lazy"
           />
         </Link>
         {product.discount && (
@@ -43,7 +43,7 @@ const GiftingProductCard = ({product}) => {
         </div>
       </div>
       <div className="pt-4">
-        <h3 className="text-base font-medium text-charcoal mb-2 truncate">
+        <h3 className="text-xl font-black text-charcoal mb-2 truncate">
           {product.name}
         </h3>
         <div className="flex justify-center items-baseline space-x-2 mb-2">
@@ -63,7 +63,7 @@ const GiftingProductCard = ({product}) => {
           </div>
         )}
         {/* WhatsApp button */}
-        <button 
+        <button
           onClick={handleWhatsAppClick}
           className="w-full mt-2 bg-green-600 text-white py-2 rounded-sm hover:bg-green-700 transition-colors text-sm font-semibold flex items-center justify-center space-x-1"
         >

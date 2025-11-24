@@ -61,7 +61,7 @@ const Header = () => {
             <div className="flex-shrink-0">
               <a href="#/" className="block">
                 <img
-                  src="/asserts/img/logo_black.png"
+                  src="/logo_black.png"
                   alt="Sharoma Logo"
                   className="h-12 w-auto"
                 />
@@ -125,7 +125,7 @@ const Header = () => {
             </button>
             <Link to="/">
               <img
-                src="/asserts/img/logo_black.png"
+                src="/logo_black.png"
                 alt="Sharoma Logo"
                 className="h-10 w-auto"
               />

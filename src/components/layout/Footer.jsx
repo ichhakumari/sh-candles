@@ -176,7 +176,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-[#3B2F2F]/20 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-white text-sm">
-            © 2024 Sharoma Candles. All rights reserved.
+            © 2024 Sharoma Candles. All rights reserved. Designed by Brandingpioneers.
           </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <Link

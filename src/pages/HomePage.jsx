@@ -76,7 +76,7 @@ const HomePage = () => {
   ];
 
   const categories = [
-    { title: 'Jai Guruji', link: '/collection/jai-guruji', image: '/asserts/img/GurujiBirthday5.png' },
+    { title: 'Jai Guruji', link: '/collection/jai-guruji', image: '/guruji/GurujiBirthday5.png' },
     { title: 'Winter Special', link: '/collection/winter-special', image: '/asserts/img/product/Trending2.png' },
     { title: 'Gifting Candles', link: '/collection/gifting', image: '/asserts/img/product/Trending.png' },
     { title: 'Summer Special', link: '/collection/summer-special', image: '/asserts/img/product/Luxirus.png' }

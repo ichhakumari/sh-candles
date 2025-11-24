@@ -8,8 +8,8 @@ const { FiMessageSquare } = FiIcons;
 
 const ProductCard = ({ product, compact = false }) => {
   const cardHeight = compact ? 'h-48' : 'h-72';
-  const textSize = compact ? 'text-sm' : 'text-base';
-  const priceSize = compact ? 'text-base' : 'text-lg';
+  const textSize = compact ? 'text-base' : 'text-xl';
+  const priceSize = compact ? 'text-lg' : 'text-xl';
 
   const handleWhatsAppClick = (e) => {
     e.preventDefault();
@@ -48,7 +48,7 @@ const ProductCard = ({ product, compact = false }) => {
         {/* Top trending products */}
         {/* Content Container */}
         <div className="pt-4 text-center">
-          <h3 className={`${textSize} font-medium text-charcoal mb-2 line-clamp-2 min-h-[2.5em]`}>
+          <h3 className={`${textSize} font-black text-charcoal mb-2 line-clamp-2 min-h-[2.5em]`}>
             {product.name}
           </h3>
           <div className="flex justify-center items-baseline space-x-2 mb-2">

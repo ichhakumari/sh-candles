@@ -1,11 +1,11 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import SafeIcon from '../../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 
-const {FiVolumeX, FiMessageSquare} = FiIcons;
+const { FiVolumeX, FiMessageSquare } = FiIcons;
 
-const BestSellerProductCard = ({product}) => {
+const BestSellerProductCard = ({ product }) => {
   let tag = null;
   if (product.category === 'trending') {
     tag = 'Trending';
@@ -25,11 +25,11 @@ const BestSellerProductCard = ({product}) => {
     <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col h-full border border-gray-100 group transition-shadow duration-300 hover:shadow-lg">
       <div className="relative overflow-hidden">
         <Link to={`/product/${product.id}`} className="block aspect-[3/4]">
-          <img 
-            src={product.image} 
-            alt={product.name} 
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
-            loading="lazy" 
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
           />
         </Link>
         {tag && (
@@ -44,12 +44,12 @@ const BestSellerProductCard = ({product}) => {
         </div>
       </div>
       <div className="p-4 flex-grow text-center flex flex-col">
-        <h3 className="text-base font-semibold text-charcoal mb-2 truncate flex-grow">
+        <h3 className="text-xl font-black text-charcoal mb-2 truncate flex-grow">
           {product.name}
         </h3>
 
         <div className="flex items-center justify-center mb-3 space-x-2 ">
-          <span className="text-base font-bold text-charcoal">
+          <span className="text-lg font-bold text-charcoal">
             ₹{product.price.toFixed(0)}
           </span>
           {product.originalPrice && (
@@ -70,7 +70,7 @@ const BestSellerProductCard = ({product}) => {
               Order Now
             </button>
           </Link>
-          <button 
+          <button
             onClick={handleWhatsAppClick}
             className="w-full bg-green-600 text-white font-semibold py-2.5 rounded-lg hover:bg-green-700 transition-colors text-sm flex items-center justify-center space-x-1"
           >
