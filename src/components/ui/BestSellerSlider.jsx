@@ -22,7 +22,7 @@ const bestSellerVideos = [
     videoUrl: '/videos/3.mp4',
     productId: 9,
     productName: 'Vanilla Glow',
-    productPrice: 1299.00,
+    productPrice: '₹1299.00',
     thumbnail: ''
   },
   {
@@ -30,7 +30,7 @@ const bestSellerVideos = [
     videoUrl: '/videos/guruji.mp4',
     productId: 11,
     productName: 'Rose & Sandalwood Premium Candle',
-    productPrice: 1599,
+    productPrice: '₹1599',
     thumbnail: ''
   },
   {
@@ -38,7 +38,7 @@ const bestSellerVideos = [
     videoUrl: '/videos/premium lavender.mp4',
     productId: 16,
     productName: 'Summer Mango',
-    productPrice: 1200.00,
+    productPrice: '₹1200.00',
     thumbnail: ''
   },
   {
@@ -46,7 +46,7 @@ const bestSellerVideos = [
     videoUrl: '/videos/whiteladyjar.mp4',
     productId: 25,
     productName: 'Cozy Cabin',
-    productPrice: 899.00,
+    productPrice: '₹899.00',
     thumbnail: ''
   }
 ];
@@ -175,7 +175,7 @@ const BestSellerSlider = () => {
 
                   {/* Product Info Overlay - Redesigned */}
                   <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
-                    <h3 className="text-lg font-extrabold mb-2 line-clamp-2 drop-shadow-lg">{video.productName}</h3>
+                    <h3 className="text-xl font-sans font-bold mb-2 line-clamp-2 drop-shadow-lg">{video.productName}</h3>
                     <p className="text-2xl font-bold text-gold mb-3 drop-shadow-lg tracking-wide">{video.productPrice}</p>
                     <Link
                       to={`/product/${video.productId}`}

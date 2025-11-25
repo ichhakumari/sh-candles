@@ -43,16 +43,16 @@ const GiftingProductCard = ({ product }) => {
         </div>
       </div>
       <div className="pt-4">
-        <h3 className="text-xl font-black text-charcoal mb-2 truncate">
+        <h3 className="text-xl font-sans font-semibold text-charcoal mb-2 truncate">
           {product.name}
         </h3>
         <div className="flex justify-center items-baseline space-x-2 mb-2">
           <span className="text-lg font-semibold text-red-600">
-            Rs. {product.price.toFixed(2)}
+            ₹{product.price.toFixed(2)}
           </span>
           {product.originalPrice && (
             <span className="text-sm text-warm-grey line-through">
-              Rs. {product.originalPrice.toFixed(2)}
+              ₹{product.originalPrice.toFixed(2)}
             </span>
           )}
         </div>

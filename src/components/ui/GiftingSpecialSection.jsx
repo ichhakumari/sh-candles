@@ -1,12 +1,12 @@
 import React from 'react';
-import {motion} from 'framer-motion';
-import {Link} from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import SafeIcon from '../../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 
-const {FiHeart, FiLayers, FiEye, FiCheck, FiMessageSquare} = FiIcons;
+const { FiHeart, FiLayers, FiEye, FiCheck, FiMessageSquare } = FiIcons;
 
-const GiftingProductCard = ({product}) => {
+const GiftingProductCard = ({ product }) => {
   const handleWhatsAppClick = () => {
     const phoneNumber = '+919779880180';
     const message = encodeURIComponent(`Hi! I'd like to order ${product.name}. Please let me know availability and pricing details.`);
@@ -17,11 +17,11 @@ const GiftingProductCard = ({product}) => {
     <div className="group text-center bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
       <div className="relative overflow-hidden">
         <Link to={`/product/${product.id}`} className="block">
-          <img 
-            src={product.image} 
-            alt={product.name} 
-            className="w-full h-64 object-cover" 
-            loading="lazy" 
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-64 object-cover"
+            loading="lazy"
           />
         </Link>
         {/* Discount Badge */}
@@ -48,16 +48,16 @@ const GiftingProductCard = ({product}) => {
       </div>
       {/* Product Info */}
       <div className="pt-4 pb-6 px-4">
-        <h3 className="text-base font-medium text-charcoal mb-2 truncate">
+        <h3 className="text-xl font-sans font-semibold text-charcoal mb-2 truncate">
           {product.name}
         </h3>
         <div className="flex justify-center items-baseline space-x-2 mb-2">
           <span className="text-lg font-semibold text-red-600">
-            Rs. {product.price.toFixed(2)}
+            ₹{product.price.toFixed(2)}
           </span>
           {product.originalPrice && (
             <span className="text-sm text-warm-grey line-through">
-              Rs. {product.originalPrice.toFixed(2)}
+              ₹{product.originalPrice.toFixed(2)}
             </span>
           )}
         </div>
@@ -68,7 +68,7 @@ const GiftingProductCard = ({product}) => {
           </div>
         )}
         {/* WhatsApp button */}
-        <button 
+        <button
           onClick={handleWhatsAppClick}
           className="w-full mt-2 bg-green-600 text-white py-2 rounded-sm hover:bg-green-700 transition-colors text-sm font-semibold flex items-center justify-center space-x-1"
         >
@@ -80,7 +80,7 @@ const GiftingProductCard = ({product}) => {
   );
 };
 
-const GiftingSpecialSection = ({products}) => {
+const GiftingSpecialSection = ({ products }) => {
   if (!products || products.length === 0) return null;
   // Display only first 4 products for the 2x2 grid
   const displayProducts = products.slice(0, 4);
@@ -91,12 +91,12 @@ const GiftingSpecialSection = ({products}) => {
       <div className="lg:col-span-2">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {displayProducts.map((product, index) => (
-            <motion.div 
-              key={product.id} 
-              initial={{opacity: 0, y: 50}} 
-              whileInView={{opacity: 1, y: 0}} 
-              viewport={{once: true}} 
-              transition={{delay: index * 0.1}}
+            <motion.div
+              key={product.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
             >
               <GiftingProductCard product={product} />
             </motion.div>
@@ -105,17 +105,17 @@ const GiftingSpecialSection = ({products}) => {
       </div>
       {/* Right Side: Large Promotional Image */}
       <div className="lg:col-span-1">
-        <motion.div 
-          initial={{opacity: 0, x: 50}} 
-          whileInView={{opacity: 1, x: 0}} 
-          viewport={{once: true}} 
-          transition={{delay: 0.3}} 
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
           className="h-full"
         >
           <Link to="/collection/gifting" className="block h-full">
-            <div 
-              className="h-full bg-cover bg-center rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 min-h-[600px] lg:min-h-[700px]" 
-              style={{backgroundImage: "url('https://images.unsplash.com/photo-1616103689439-d33264175510?w=600&h=800&fit=crop')"}}
+            <div
+              className="h-full bg-cover bg-center rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 min-h-[600px] lg:min-h-[700px]"
+              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1616103689439-d33264175510?w=600&h=800&fit=crop')" }}
             >
               {/* Optional overlay content */}
               <div className="h-full bg-black/20 hover:bg-black/30 transition-colors duration-300 flex items-end p-8">

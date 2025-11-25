@@ -64,7 +64,7 @@ const FilterSidebar = ({
           </button>
         </div>
         <p className="text-sm text-warm-grey mb-4">
-          The highest price is Rs. {priceRange.max.toFixed(2)}
+          The highest price is ₹{priceRange.max.toFixed(2)}
         </p>
         <div className="flex items-center gap-2">
           <span className="text-lg text-warm-grey">₹</span>
@@ -110,11 +110,11 @@ const FilterSidebar = ({
                   </p>
                   <div className="flex items-baseline space-x-1.5 mt-1">
                     <p className="text-sm text-charcoal font-semibold">
-                      Rs. {product.price.toFixed(2)}
+                      ₹{product.price.toFixed(2)}
                     </p>
                     {product.originalPrice && (
                       <p className="text-xs text-warm-grey line-through">
-                        Rs. {product.originalPrice.toFixed(2)}
+                        ₹{product.originalPrice.toFixed(2)}
                       </p>
                     )}
                   </div>

@@ -38,7 +38,7 @@ const HomePage = () => {
       subtitle: "Divine Fragrances for Spiritual Moments",
       cta: "Explore Collection",
       link: "/collection/jai-guruji",
-      image: "/banner5.png",
+      image: "/banner1.jpeg",
       category: "spiritual"
     },
     {
@@ -54,7 +54,7 @@ const HomePage = () => {
       subtitle: "Our Most Popular Scents Right Now",
       cta: "Explore Now",
       link: "/collection/trending",
-      image: "/banner3.jpeg",
+      image: "/banner1.jpeg",
       category: "trending"
     },
     {
@@ -62,7 +62,7 @@ const HomePage = () => {
       subtitle: "Cozy Scents for Cold Winter Nights",
       cta: "Explore Now",
       link: "/collection/winter-special",
-      image: "/banner4.jpeg",
+      image: "/banner2.jpeg",
       category: "winter-special"
     },
     {
@@ -70,7 +70,7 @@ const HomePage = () => {
       subtitle: "Refreshing Scents for Warm Days",
       cta: "Explore Now",
       link: "/collection/summer-special",
-      image: "/banner1.jpeg",
+      image: "/banner5.png",
       category: "summer"
     }
   ];
@@ -146,6 +146,7 @@ const HomePage = () => {
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-16 lg:pt-32">
       {/* Hero Carousel */}
       <section className="relative h-[65vh] min-h-[500px] sm:h-[70vh] md:h-[75vh] lg:h-[85vh] xl:h-[90vh] max-h-screen overflow-hidden">
+        {/* Background Image Layer - z-0 */}
         <AnimatePresence initial={false} custom={currentSlide > 0 ? 1 : -1}>
           <motion.div
             key={currentSlide}
@@ -154,18 +155,21 @@ const HomePage = () => {
             initial="enter"
             animate="center"
             exit="exit"
-            className="absolute inset-0"
+            className="absolute inset-0 z-0"
           >
             <img
               src={heroSlides[currentSlide].image}
               alt={heroSlides[currentSlide].title}
               className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
           </motion.div>
         </AnimatePresence>
 
-        <div className="relative h-full flex items-center justify-center text-center px-3 sm:px-6 lg:px-8">
+        {/* Dark Overlay Layer - z-10 */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 z-10 pointer-events-none" />
+
+        {/* Content Layer - z-20 */}
+        {/* <div className="relative h-full flex items-center justify-center text-center px-3 sm:px-6 lg:px-8 z-20">
           <motion.div
             key={heroSlides[currentSlide].title}
             initial={{ y: 50, opacity: 0 }}
@@ -173,15 +177,15 @@ const HomePage = () => {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="max-w-5xl mx-auto w-full"
           >
-            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-semibold text-white mb-3 sm:mb-4 md:mb-6 leading-tight px-2">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-semibold text-white mb-3 sm:mb-4 md:mb-6 leading-tight px-2 drop-shadow-lg">
               {heroSlides[currentSlide].title}
             </h1>
-            <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 md:mb-10 px-2 sm:px-4 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 md:mb-10 px-2 sm:px-4 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
               {heroSlides[currentSlide].subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-3 sm:px-4">
               <Link to={heroSlides[currentSlide].link} className="w-full sm:w-auto max-w-xs sm:max-w-none">
-                <Button variant="secondary" size="lg" className="w-full sm:w-auto min-w-[200px]">
+                <Button variant="secondary" size="lg" className="w-full sm:w-auto min-w-[200px] shadow-lg">
                   {heroSlides[currentSlide].cta}
                 </Button>
               </Link>
@@ -189,17 +193,18 @@ const HomePage = () => {
                 variant="outline"
                 size="lg"
                 onClick={handleWhatsAppCTA}
-                className="text-white border-2 border-white hover:bg-white hover:text-charcoal w-full sm:w-auto max-w-xs sm:max-w-none min-w-[200px]"
+                className="text-white border-2 border-white hover:bg-white hover:text-charcoal w-full sm:w-auto max-w-xs sm:max-w-none min-w-[200px] shadow-lg"
               >
                 Order on WhatsApp
               </Button>
             </div>
           </motion.div>
-        </div>
+        </div> */}
 
+        {/* Navigation Controls - z-30 */}
         <button
           onClick={() => handleSlideChange('prev')}
-          className="absolute left-2 sm:left-4 md:left-6 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 text-white hover:bg-white/40 active:bg-white/50 transition-all duration-300 z-10 touch-manipulation"
+          className="absolute left-2 sm:left-4 md:left-6 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 text-white hover:bg-white/40 active:bg-white/50 transition-all duration-300 z-30 touch-manipulation shadow-lg"
           aria-label="Previous slide"
         >
           <SafeIcon icon={FiChevronLeft} className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6" />
@@ -207,18 +212,18 @@ const HomePage = () => {
 
         <button
           onClick={() => handleSlideChange('next')}
-          className="absolute right-2 sm:right-4 md:right-6 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 text-white hover:bg-white/40 active:bg-white/50 transition-all duration-300 z-10 touch-manipulation"
+          className="absolute right-2 sm:right-4 md:right-6 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 text-white hover:bg-white/40 active:bg-white/50 transition-all duration-300 z-30 touch-manipulation shadow-lg"
           aria-label="Next slide"
         >
           <SafeIcon icon={FiChevronRight} className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6" />
         </button>
 
-        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
           {heroSlides.map((_, index) => (
             <button
               key={index}
               onClick={() => handleDotClick(index)}
-              className={`h-2 sm:h-3 rounded-full transition-all duration-300 touch-manipulation ${currentSlide === index ? 'bg-white w-6 sm:w-8' : 'bg-white/50 hover:bg-white/75 w-2 sm:w-3'
+              className={`h-2 sm:h-3 rounded-full transition-all duration-300 touch-manipulation shadow-md ${currentSlide === index ? 'bg-white w-6 sm:w-8' : 'bg-white/50 hover:bg-white/75 w-2 sm:w-3'
                 }`}
               aria-label={`Go to slide ${index + 1}`}
             />

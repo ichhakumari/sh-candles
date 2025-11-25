@@ -48,16 +48,16 @@ const ProductCard = ({ product, compact = false }) => {
         {/* Top trending products */}
         {/* Content Container */}
         <div className="pt-4 text-center">
-          <h3 className={`${textSize} font-black text-charcoal mb-2 line-clamp-2 min-h-[2.5em]`}>
+          <h3 className={`${textSize} font-sans font-semibold text-charcoal mb-2 line-clamp-2 min-h-[2.5em]`}>
             {product.name}
           </h3>
           <div className="flex justify-center items-baseline space-x-2 mb-2">
             <span className={`${priceSize} font-semibold text-red-600`}>
-              Rs. {product.price.toFixed(2)}
+              ₹{product.price.toFixed(2)}
             </span>
             {product.originalPrice && (
               <span className="text-base text-warm-grey line-through">
-                Rs. {product.originalPrice.toFixed(2)}
+                ₹{product.originalPrice.toFixed(2)}
               </span>
             )}
           </div>
