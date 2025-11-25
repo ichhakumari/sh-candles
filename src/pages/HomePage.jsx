@@ -38,7 +38,7 @@ const HomePage = () => {
       subtitle: "Divine Fragrances for Spiritual Moments",
       cta: "Explore Collection",
       link: "/collection/jai-guruji",
-      image: "/asserts/img/11.png",
+      image: "/banner1.jpeg",
       category: "spiritual"
     },
     {
@@ -46,7 +46,7 @@ const HomePage = () => {
       subtitle: "Perfect Presents for Every Occasion",
       cta: "Explore Now",
       link: "/collection/gifting",
-      image: "/asserts/img/gift.png",
+      image: "/banner2.jpeg",
       category: "gifting"
     },
     {
@@ -54,7 +54,7 @@ const HomePage = () => {
       subtitle: "Our Most Popular Scents Right Now",
       cta: "Explore Now",
       link: "/collection/trending",
-      image: "/asserts/img/11.png",
+      image: "/banner3.jpeg",
       category: "trending"
     },
     {
@@ -62,7 +62,7 @@ const HomePage = () => {
       subtitle: "Cozy Scents for Cold Winter Nights",
       cta: "Explore Now",
       link: "/collection/winter-special",
-      image: "/asserts/img/gift.png",
+      image: "/banner4.jpeg",
       category: "winter-special"
     },
     {
@@ -76,10 +76,10 @@ const HomePage = () => {
   ];
 
   const categories = [
-    { title: 'Jai Guruji', link: '/collection/jai-guruji', image: '/guruji/GurujiBirthday5.png' },
+    { title: 'Jai Guruji', link: '/collection/jai-guruji', image: '/guruji/GurujiBirthday2.png' },
     { title: 'Winter Special', link: '/collection/winter-special', image: '/asserts/img/product/Trending2.png' },
-    { title: 'Gifting Candles', link: '/collection/gifting', image: '/asserts/img/product/Trending.png' },
-    { title: 'Summer Special', link: '/collection/summer-special', image: '/asserts/img/product/Luxirus.png' }
+    { title: 'Gifting Candles', link: '/collection/gifting', image: '/gift/JarofRoses_.png' },
+    { title: 'Summer Special', link: '/collection/summer-special', image: '/summer/SweetHearts.png' }
   ];
 
   const testimonials = [
@@ -145,7 +145,7 @@ const HomePage = () => {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-16 lg:pt-32">
       {/* Hero Carousel */}
-      <section className="relative h-[50vh] sm:h-[60vh] lg:h-[80vh] overflow-hidden">
+      <section className="relative h-[60vh] sm:h-[70vh] md:h-[75vh] lg:h-[85vh] xl:h-[90vh] overflow-hidden">
         <AnimatePresence initial={false} custom={currentSlide > 0 ? 1 : -1}>
           <motion.div
             key={currentSlide}
@@ -159,29 +159,29 @@ const HomePage = () => {
             <img
               src={heroSlides[currentSlide].image}
               alt={heroSlides[currentSlide].title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
           </motion.div>
         </AnimatePresence>
 
-        <div className="relative h-full flex items-center justify-center text-center">
+        <div className="relative h-full flex items-center justify-center text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             key={heroSlides[currentSlide].title}
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="max-w-4xl mx-auto px-4"
+            className="max-w-5xl mx-auto w-full"
           >
-            <h1 className="text-4xl lg:text-6xl font-serif font-semibold text-white mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-semibold text-white mb-3 sm:mb-4 md:mb-6 leading-tight px-2">
               {heroSlides[currentSlide].title}
             </h1>
-            <p className="text-xl lg:text-2xl text-white/90 mb-8">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 md:mb-10 px-4 max-w-3xl mx-auto">
               {heroSlides[currentSlide].subtitle}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to={heroSlides[currentSlide].link}>
-                <Button variant="secondary" size="lg">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
+              <Link to={heroSlides[currentSlide].link} className="w-full sm:w-auto">
+                <Button variant="secondary" size="lg" className="w-full sm:w-auto">
                   {heroSlides[currentSlide].cta}
                 </Button>
               </Link>
@@ -189,7 +189,7 @@ const HomePage = () => {
                 variant="outline"
                 size="lg"
                 onClick={handleWhatsAppCTA}
-                className="text-white border-white hover:bg-white hover:text-charcoal"
+                className="text-white border-white hover:bg-white hover:text-charcoal w-full sm:w-auto"
               >
                 Order on WhatsApp
               </Button>
@@ -199,26 +199,26 @@ const HomePage = () => {
 
         <button
           onClick={() => handleSlideChange('prev')}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-3 text-white hover:bg-white/30 transition-all duration-300 z-10"
+          className="absolute left-2 sm:left-4 md:left-6 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 text-white hover:bg-white/30 transition-all duration-300 z-10"
           aria-label="Previous slide"
         >
-          <SafeIcon icon={FiChevronLeft} className="w-6 h-6" />
+          <SafeIcon icon={FiChevronLeft} className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
         </button>
 
         <button
           onClick={() => handleSlideChange('next')}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-3 text-white hover:bg-white/30 transition-all duration-300 z-10"
+          className="absolute right-2 sm:right-4 md:right-6 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 text-white hover:bg-white/30 transition-all duration-300 z-10"
           aria-label="Next slide"
         >
-          <SafeIcon icon={FiChevronRight} className="w-6 h-6" />
+          <SafeIcon icon={FiChevronRight} className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
         </button>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
           {heroSlides.map((_, index) => (
             <button
               key={index}
               onClick={() => handleDotClick(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index ? 'bg-white w-8' : 'bg-white/50 hover:bg-white/75'
+              className={`h-2 sm:h-3 rounded-full transition-all duration-300 ${currentSlide === index ? 'bg-white w-6 sm:w-8' : 'bg-white/50 hover:bg-white/75 w-2 sm:w-3'
                 }`}
               aria-label={`Go to slide ${index + 1}`}
             />
@@ -333,7 +333,7 @@ const HomePage = () => {
             viewport={{ once: true }}
           >
             <img
-              src='/asserts/img/guruji.png'
+              src='/guru.png'
               alt="Jai Guruji Collection"
               className="w-full h-96 object-cover rounded-lg shadow-lg"
             />
@@ -354,14 +354,14 @@ const HomePage = () => {
               perfect for meditation, prayer, and spiritual reflection.
             </p>
             <ul className="space-y-2 text-[#6E5A4A]">
-              <li>• Hand-poured with premium natural wax</li>
-              <li>• Infused with authentic essential oils</li>
-              <li>• 50-60 hour burn time</li>
-              <li>• Perfect for meditation and spiritual practices</li>
+              <li>✓ Hand-poured with premium natural wax</li>
+              <li>✓ Infused with authentic essential oils</li>
+              <li>✓ 50-60 hour burn time</li>
+              <li>✓ Perfect for meditation and spiritual practices</li>
             </ul>
             <br></br>
             <Link to="/collection/jai-guruji">
-              <Button variant="primary" size="lg">
+              <Button variant="secondary" size="lg">
                 Explore Collection
               </Button>
             </Link>
