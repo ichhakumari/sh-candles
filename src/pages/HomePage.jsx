@@ -165,9 +165,6 @@ const HomePage = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/* Dark Overlay Layer - z-10 */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 z-10 pointer-events-none" />
-
         {/* Content Layer - z-20 */}
         {/* <div className="relative h-full flex items-center justify-center text-center px-3 sm:px-6 lg:px-8 z-20">
           <motion.div
