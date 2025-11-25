@@ -38,7 +38,7 @@ const HomePage = () => {
       subtitle: "Divine Fragrances for Spiritual Moments",
       cta: "Explore Collection",
       link: "/collection/jai-guruji",
-      image: "/banner1.jpeg",
+      image: "/banner5.png",
       category: "spiritual"
     },
     {
@@ -70,7 +70,7 @@ const HomePage = () => {
       subtitle: "Refreshing Scents for Warm Days",
       cta: "Explore Now",
       link: "/collection/summer-special",
-      image: "/asserts/img/banner/2.png",
+      image: "/banner1.jpeg",
       category: "summer"
     }
   ];
@@ -145,7 +145,7 @@ const HomePage = () => {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-16 lg:pt-32">
       {/* Hero Carousel */}
-      <section className="relative h-[60vh] sm:h-[70vh] md:h-[75vh] lg:h-[85vh] xl:h-[90vh] overflow-hidden">
+      <section className="relative h-[65vh] min-h-[500px] sm:h-[70vh] md:h-[75vh] lg:h-[85vh] xl:h-[90vh] max-h-screen overflow-hidden">
         <AnimatePresence initial={false} custom={currentSlide > 0 ? 1 : -1}>
           <motion.div
             key={currentSlide}
@@ -165,7 +165,7 @@ const HomePage = () => {
           </motion.div>
         </AnimatePresence>
 
-        <div className="relative h-full flex items-center justify-center text-center px-4 sm:px-6 lg:px-8">
+        <div className="relative h-full flex items-center justify-center text-center px-3 sm:px-6 lg:px-8">
           <motion.div
             key={heroSlides[currentSlide].title}
             initial={{ y: 50, opacity: 0 }}
@@ -173,15 +173,15 @@ const HomePage = () => {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="max-w-5xl mx-auto w-full"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-semibold text-white mb-3 sm:mb-4 md:mb-6 leading-tight px-2">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-semibold text-white mb-3 sm:mb-4 md:mb-6 leading-tight px-2">
               {heroSlides[currentSlide].title}
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 md:mb-10 px-4 max-w-3xl mx-auto">
+            <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 md:mb-10 px-2 sm:px-4 max-w-3xl mx-auto leading-relaxed">
               {heroSlides[currentSlide].subtitle}
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
-              <Link to={heroSlides[currentSlide].link} className="w-full sm:w-auto">
-                <Button variant="secondary" size="lg" className="w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-3 sm:px-4">
+              <Link to={heroSlides[currentSlide].link} className="w-full sm:w-auto max-w-xs sm:max-w-none">
+                <Button variant="secondary" size="lg" className="w-full sm:w-auto min-w-[200px]">
                   {heroSlides[currentSlide].cta}
                 </Button>
               </Link>
@@ -189,7 +189,7 @@ const HomePage = () => {
                 variant="outline"
                 size="lg"
                 onClick={handleWhatsAppCTA}
-                className="text-white border-white hover:bg-white hover:text-charcoal w-full sm:w-auto"
+                className="text-white border-2 border-white hover:bg-white hover:text-charcoal w-full sm:w-auto max-w-xs sm:max-w-none min-w-[200px]"
               >
                 Order on WhatsApp
               </Button>
@@ -199,18 +199,18 @@ const HomePage = () => {
 
         <button
           onClick={() => handleSlideChange('prev')}
-          className="absolute left-2 sm:left-4 md:left-6 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 text-white hover:bg-white/30 transition-all duration-300 z-10"
+          className="absolute left-2 sm:left-4 md:left-6 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 text-white hover:bg-white/40 active:bg-white/50 transition-all duration-300 z-10 touch-manipulation"
           aria-label="Previous slide"
         >
-          <SafeIcon icon={FiChevronLeft} className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+          <SafeIcon icon={FiChevronLeft} className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6" />
         </button>
 
         <button
           onClick={() => handleSlideChange('next')}
-          className="absolute right-2 sm:right-4 md:right-6 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 text-white hover:bg-white/30 transition-all duration-300 z-10"
+          className="absolute right-2 sm:right-4 md:right-6 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-2 sm:p-3 text-white hover:bg-white/40 active:bg-white/50 transition-all duration-300 z-10 touch-manipulation"
           aria-label="Next slide"
         >
-          <SafeIcon icon={FiChevronRight} className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+          <SafeIcon icon={FiChevronRight} className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6" />
         </button>
 
         <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
@@ -218,7 +218,7 @@ const HomePage = () => {
             <button
               key={index}
               onClick={() => handleDotClick(index)}
-              className={`h-2 sm:h-3 rounded-full transition-all duration-300 ${currentSlide === index ? 'bg-white w-6 sm:w-8' : 'bg-white/50 hover:bg-white/75 w-2 sm:w-3'
+              className={`h-2 sm:h-3 rounded-full transition-all duration-300 touch-manipulation ${currentSlide === index ? 'bg-white w-6 sm:w-8' : 'bg-white/50 hover:bg-white/75 w-2 sm:w-3'
                 }`}
               aria-label={`Go to slide ${index + 1}`}
             />
