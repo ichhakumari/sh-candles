@@ -44,7 +44,7 @@ const BestSellerProductCard = ({ product }) => {
         </div>
       </div>
       <div className="p-4 flex-grow text-center flex flex-col">
-        <h3 className="text-xl font-black text-charcoal mb-2 truncate flex-grow">
+        <h3 className="text-xl font-semibold text-charcoal mb-2 truncate flex-grow">
           {product.name}
         </h3>
 

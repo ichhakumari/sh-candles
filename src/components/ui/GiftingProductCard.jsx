@@ -43,7 +43,7 @@ const GiftingProductCard = ({ product }) => {
         </div>
       </div>
       <div className="pt-4">
-        <h3 className="text-xl font-sans font-semibold text-charcoal mb-2 truncate">
+        <h3 className="text-xl font-sans font-normal text-charcoal mb-2 truncate">
           {product.name}
         </h3>
         <div className="flex justify-center items-baseline space-x-2 mb-2">
