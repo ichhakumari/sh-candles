@@ -83,12 +83,21 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-medium mb-6">Quick Links</h3>
             <ul className="space-y-3">
+
               <li>
                 <Link
-                  to="/shop"
+                  to="/about"
                   className="text-white hover:text-[#C6A27E] transition-colors"
                 >
-                  Shop All
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-white hover:text-[#C6A27E] transition-colors"
+                >
+                  Contact
                 </Link>
               </li>
               <li>
@@ -109,28 +118,22 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/shop"
+                  className="text-white hover:text-[#C6A27E] transition-colors"
+                >
+                  Shop All
+                </Link>
+              </li>
+
+              <li>
+                <Link
                   to="/winter-special"
                   className="text-white hover:text-[#C6A27E] transition-colors"
                 >
                   Winter Special
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/about"
-                  className="text-white hover:text-[#C6A27E] transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className="text-white hover:text-[#C6A27E] transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
+
             </ul>
           </div>
 
@@ -149,26 +152,39 @@ const Footer = () => {
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <SafeIcon
-                  icon={FiPhone}
-                  className="w-5 h-5 text-white flex-shrink-0"
-                />
-                <span className="text-white">+91 779 988 0180</span>
+                <a
+                  href="tel:+917799880180"
+                  className="flex items-center space-x-3"
+                >
+                  <SafeIcon
+                    icon={FiPhone}
+                    className="w-5 h-5 text-white flex-shrink-0"
+                  />
+                  <span className="text-white">+91 779 988 0180</span>
+                </a>
+
               </div>
               <div className="flex items-center space-x-3">
-                <SafeIcon
-                  icon={FiMail}
-                  className="w-5 h-5 text-white flex-shrink-0"
-                />
-                <span className="text-white">sharomacandles.shop@gmail.com</span>
+                <a
+                  href="mailto:sharomacandles.shop@gmail.com"
+                  className="flex items-center space-x-3"
+                >
+                  <SafeIcon
+                    icon={FiMail}
+                    className="w-5 h-5 text-white flex-shrink-0"
+                  />
+                  <span className="text-white">sharomacandles.shop@gmail.com</span>
+                </a>
+
               </div>
-              <div className="flex items-center space-x-3">
+
+              {/* <div className="flex items-center space-x-3">
                 <SafeIcon
                   icon={FiMessageSquare}
                   className="w-5 h-5 text-white flex-shrink-0"
                 />
-                <span className="text-white">(+100) 666-456-7890</span>
-              </div>
+                 <span className="text-white">(+100) 666-456-7890</span> 
+              </div> */}
             </div>
           </div>
         </div>

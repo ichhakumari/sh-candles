@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SafeIcon from '../../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const { FiVolumeX, FiMessageSquare } = FiIcons;
 
@@ -72,10 +73,10 @@ const BestSellerProductCard = ({ product }) => {
           </Link>
           <button
             onClick={handleWhatsAppClick}
-            className="w-full bg-green-600 text-white font-semibold py-2.5 rounded-lg hover:bg-green-700 transition-colors text-sm flex items-center justify-center space-x-1"
+            className="w-full bg-green-600 text-white font-semibold py-2.5 rounded-lg hover:bg-green-700 transition-colors text-sm flex items-center justify-center space-x-2"
           >
-            <SafeIcon icon={FiMessageSquare} className="w-4 h-4" />
-            <span>Order on WhatsApp</span>
+            <span>Order on</span>
+            <SafeIcon icon={FaWhatsapp} className="w-5 h-5" />
           </button>
         </div>
       </div>

@@ -1,15 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../../common/SafeIcon';
-
-const { FiMessageSquare } = FiIcons;
+import { FaWhatsapp } from 'react-icons/fa';
 
 const ProductCard = ({ product, compact = false }) => {
   const cardHeight = compact ? 'h-48' : 'h-72';
-  const textSize = compact ? 'text-base' : 'text-xl';
-  const priceSize = compact ? 'text-lg' : 'text-xl';
+  const textSize = compact ? 'text-sm sm:text-base' : 'text-sm sm:text-base lg:text-xl';
+  const priceSize = compact ? 'text-base sm:text-lg' : 'text-base sm:text-lg lg:text-xl';
 
   const handleWhatsAppClick = (e) => {
     e.preventDefault();
@@ -23,7 +21,6 @@ const ProductCard = ({ product, compact = false }) => {
 
   return (
     <motion.div whileHover={{ y: -5 }} className="group shadow-md shadow-gray-400/50 hover:shadow-lg hover:shadow-gray-400/60 rounded-lg overflow-hidden bg-white transition-all duration-300">
-      {/* <motion.div whileHover={{ y: -5 }} className="group"> */}
       <Link to={`/product/${product.id}`} className="block">
         {/* Image Container */}
         <div className="relative overflow-hidden bg-white border border-gray-100 shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/30 transition-all duration-300">
@@ -45,10 +42,9 @@ const ProductCard = ({ product, compact = false }) => {
             </button>
           </div>
         </div>
-        {/* Top trending products */}
         {/* Content Container */}
         <div className="pt-4 text-center">
-          <h3 className={`${textSize} font-sans font-normal text-charcoal mb-2 line-clamp-2 min-h-[2.5em]`}>
+          <h3 className={`${textSize} font-normal text-charcoal mb-2 line-clamp-2 min-h-[2.5em]`}>
             {product.name}
           </h3>
           <div className="flex justify-center items-baseline space-x-2 mb-2">
@@ -56,7 +52,7 @@ const ProductCard = ({ product, compact = false }) => {
               ₹{product.price.toFixed(2)}
             </span>
             {product.originalPrice && (
-              <span className="text-base text-warm-grey line-through">
+              <span className="text-xs sm:text-sm text-warm-grey line-through">
                 ₹{product.originalPrice.toFixed(2)}
               </span>
             )}
@@ -72,14 +68,12 @@ const ProductCard = ({ product, compact = false }) => {
         </Link>
         <button
           onClick={handleWhatsAppClick}
-          className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors text-sm font-medium flex items-center justify-center space-x-1"
+          className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors text-sm font-medium flex items-center justify-center space-x-2"
         >
-          <SafeIcon icon={FiMessageSquare} className="w-4 h-4" />
-          <span>Order on WhatsApp</span>
+          <span>Order on</span>
+          <SafeIcon icon={FaWhatsapp} className="w-5 h-5 flex-shrink-0" />
         </button>
       </div>
-
-
     </motion.div>
   );
 };

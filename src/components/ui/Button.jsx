@@ -1,19 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Button = ({ 
-  children, 
-  variant = 'primary', 
-  size = 'default', 
+const Button = ({
+  children,
+  variant = 'primary',
+  size = 'default',
   className = '',
   disabled = false,
   onClick,
   type = 'button',
-  ...props 
+  ...props
 }) => {
   const variants = {
     primary: 'bg-charcoal text-white hover:bg-charcoal/90',
-    secondary: 'bg-gold text-charcoal hover:bg-gold/90',
+    secondary: 'bg-gold text-white hover:bg-gold/90',
     outline: 'border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-white',
     ghost: 'text-charcoal hover:bg-charcoal/10'
   };

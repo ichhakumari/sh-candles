@@ -26,34 +26,41 @@ const AboutPage = () => {
 
   const testimonials = [
     {
-      name: "Sarah Mitchell",
+      name: "Sarah Chen",
       location: "New York, NY",
-      text: "The Jai Guruji candles have transformed my meditation practice. The scents are divine and truly help me focus.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+      text: "The Jai Guruji candles have transformed my meditation practice. The scents are divine.",
+      image: "/profile-icon4.jpg"
     },
+
     {
-      name: "David Chen",
-      location: "San Francisco, CA",
-      text: "I ordered the Winter Special collection as a gift, and the packaging was stunning. The candles smell absolutely amazing!",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      name: "Maria Rodriguez",
+      name: "Emily Johnson",
       location: "Austin, TX",
-      text: "Sharoma candles are my go-to for home fragrance. They burn so cleanly and the scents last for hours.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+      text: "The Winter Special collection brings such warmth and coziness to my home during the holidays.",
+      image: "/profile-icon3.jpg"
     },
     {
-      name: "James Wilson",
+      name: "Priya Sharma",
+      location: "Mumbai, India",
+      text: "The fragrance quality is outstanding! These candles create such a peaceful ambiance in my home.",
+      image: "/profile-icon2.jpg"
+    },
+    {
+      name: "David Wilson",
       location: "London, UK",
-      text: "The customer service is exceptional. I had a question about shipping and they responded immediately via WhatsApp.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+      text: "Best candles I've ever purchased! The burn time is incredible and the scents are not overpowering.",
+      image: "/profile-icon1.jpg"
     },
     {
-      name: "Emma Thompson",
-      location: "Sydney, AU",
-      text: "I love that these candles are vegan and eco-friendly. It's hard to find luxury candles that align with my values.",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
+      name: "Sophie Laurent",
+      location: "Paris, France",
+      text: "Absolutely love the elegant packaging and premium quality. These make perfect gifts!",
+      image: "/profile-icon5.jpg"
+    },
+    {
+      name: "Michael Rodriguez",
+      location: "San Francisco, CA",
+      text: "Exceptional quality and beautiful packaging. The WhatsApp ordering is so convenient!",
+      image: "/profile-icon.jpg"
     }
   ];
 
@@ -94,7 +101,7 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="relative h-[50vh] sm:h-[60vh] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1602874801006-af7add90a439?w=1200&h=600&fit=crop"
+          src="/asserts/img/11.png"
           alt="About Sharoma"
           className="w-full h-full object-cover"
         />
@@ -144,7 +151,7 @@ const AboutPage = () => {
             viewport={{ once: true }}
           >
             <img
-              src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&h=500&fit=crop"
+              src="/guru.png"
               alt="Candle making process"
               className="w-full h-96 object-cover rounded-lg shadow-lg"
             />
@@ -212,18 +219,18 @@ const AboutPage = () => {
       </Section>
 
       {/* CTA Section */}
-      <Section background="charcoal">
+      <Section background="white">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-4xl lg:text-5xl font-serif font-medium tracking-wide text-white mb-6">
-            Experience the Sharoma Difference
+          <h2 className="text-4xl lg:text-5xl font-serif font-medium tracking-wide text-black mb-6">
+            Experience The Sharoma Difference
           </h2>
-          <p className="text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Join thousands of customers who have transformed their spaces with our premium candles. Discover your perfect scent today.
+          <p className="text-black/80 max-w-2xl mx-auto mb-8 leading-relaxed">
+            Join Thousands of Customers Who Have Transformed Their Spaces with Our Premium Candles. Discover Your Perfect Scent Today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/shop">

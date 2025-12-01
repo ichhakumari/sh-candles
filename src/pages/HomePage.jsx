@@ -13,6 +13,7 @@ import CountdownTimer from '../components/ui/CountdownTimer';
 import CategoryCard from '../components/ui/CategoryCard';
 import PromiseSection from '../components/ui/PromiseSection';
 import WhatsAppOrderIllustration from "../components/ui/WhatsAppOrderIllustration";
+import TestimonialSlider from '../components/ui/TestimonialSlider';
 
 import { getFeaturedProducts, getWinterSpecialProducts, getBestSellers, getTopDeals, getProductsByCategory } from '../data/products';
 
@@ -83,9 +84,43 @@ const HomePage = () => {
   ];
 
   const testimonials = [
-    { name: "Sarah Chen", text: "The Jai Guruji candles have transformed my meditation practice. The scents are divine.", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" },
-    { name: "Michael Rodriguez", text: "Exceptional quality and beautiful packaging. The WhatsApp ordering is so convenient!", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" },
-    { name: "Emily Johnson", text: "The Winter Special collection brings such warmth and coziness to my home during the holidays.", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" }
+    {
+      name: "Sarah Chen",
+      location: "New York, NY",
+      text: "The Jai Guruji candles have transformed my meditation practice. The scents are divine.",
+      image: "/profile-icon4.jpg"
+    },
+
+    {
+      name: "Emily Johnson",
+      location: "Austin, TX",
+      text: "The Winter Special collection brings such warmth and coziness to my home during the holidays.",
+      image: "/profile-icon3.jpg"
+    },
+    {
+      name: "Priya Sharma",
+      location: "Mumbai, India",
+      text: "The fragrance quality is outstanding! These candles create such a peaceful ambiance in my home.",
+      image: "/profile-icon2.jpg"
+    },
+    {
+      name: "David Wilson",
+      location: "London, UK",
+      text: "Best candles I've ever purchased! The burn time is incredible and the scents are not overpowering.",
+      image: "/profile-icon1.jpg"
+    },
+    {
+      name: "Sophie Laurent",
+      location: "Paris, France",
+      text: "Absolutely love the elegant packaging and premium quality. These make perfect gifts!",
+      image: "/profile-icon5.jpg"
+    },
+    {
+      name: "Michael Rodriguez",
+      location: "San Francisco, CA",
+      text: "Exceptional quality and beautiful packaging. The WhatsApp ordering is so convenient!",
+      image: "/profile-icon.jpg"
+    }
   ];
 
   useEffect(() => {
@@ -265,8 +300,8 @@ const HomePage = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center text-center mb-12 gap-4"
         >
-          <h2 className="text-4xl lg:text-5xl font-serif font-medium text-[#3B2F2F] tracking-wide text-center">
-            Explore Winter SpecialCollection
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-medium text-[#3B2F2F] tracking-wide text-center">
+            Explore Winter Special Collection
           </h2>
         </motion.div>
 
@@ -543,26 +578,7 @@ const HomePage = () => {
           </p>
         </motion.div>
 
-        <Grid cols={3}>
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white p-8 rounded-lg shadow-md text-center"
-            >
-              <img
-                src={testimonial.avatar}
-                alt={testimonial.name}
-                className="w-16 h-16 rounded-full mx-auto mb-4 object-cover"
-              />
-              <p className="text-[#6E5A4A] italic mb-4">"{testimonial.text}"</p>
-              <h4 className="font-medium text-[#3B2F2F]">{testimonial.name}</h4>
-            </motion.div>
-          ))}
-        </Grid>
+        <TestimonialSlider testimonials={testimonials} />
       </Section>
     </motion.div>
   );

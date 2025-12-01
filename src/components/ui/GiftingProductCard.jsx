@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SafeIcon from '../../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
 
-const { FiHeart, FiLayers, FiEye, FiCheck, FiMessageSquare } = FiIcons;
+const { FiHeart, FiLayers, FiEye, FiCheck } = FiIcons;
 
 const GiftingProductCard = ({ product }) => {
   const handleWhatsAppClick = () => {
@@ -43,7 +44,7 @@ const GiftingProductCard = ({ product }) => {
         </div>
       </div>
       <div className="pt-4">
-        <h3 className="text-xl font-sans font-normal text-charcoal mb-2 truncate">
+        <h3 className="text-xl font-normal text-charcoal mb-2 truncate">
           {product.name}
         </h3>
         <div className="flex justify-center items-baseline space-x-2 mb-2">
@@ -65,10 +66,11 @@ const GiftingProductCard = ({ product }) => {
         {/* WhatsApp button */}
         <button
           onClick={handleWhatsAppClick}
-          className="w-full mt-2 bg-green-600 text-white py-2 rounded-sm hover:bg-green-700 transition-colors text-sm font-semibold flex items-center justify-center space-x-1"
+          className="w-full mt-2 bg-green-600 text-white py-2 rounded-sm hover:bg-green-700 transition-colors text-sm font-semibold flex items-center justify-center space-x-2"
         >
-          <SafeIcon icon={FiMessageSquare} className="w-4 h-4" />
-          <span>Order on WhatsApp</span>
+
+          <span>Order on</span>
+          <SafeIcon icon={FaWhatsapp} className="w-5 h-5 flex-shrink-0" />
         </button>
       </div>
     </div>

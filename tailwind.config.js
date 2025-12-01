@@ -13,8 +13,8 @@ export default {
         gold: '#C5A572',
       },
       fontFamily: {
-        'sans': ['Inter', 'sans-serif'],
-        'serif': ['The Folk', 'Cormorant Garamond', 'serif'],
+        'sans': ['Libre Baskerville', 'serif'],
+        'serif': ['Libre Baskerville', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',

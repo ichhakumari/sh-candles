@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,10 +16,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Libre Baskerville', serif !important;
 }
 
 body {
-  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-family: 'Libre Baskerville', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-ivory);
@@ -32,9 +33,22 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Cormorant Garamond', 'Georgia', serif;
-  font-weight: 500;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
   font-style: normal;
+}
+
+button,
+input,
+textarea,
+select,
+option,
+label,
+a,
+p,
+span,
+div {
+  font-family: 'Libre Baskerville', serif !important;
 }
 
 #root {
@@ -94,7 +108,7 @@ h6 {
 
 /* Custom utilities */
 .text-serif {
-  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .bg-ivory {
