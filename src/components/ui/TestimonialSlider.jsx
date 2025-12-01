@@ -36,7 +36,7 @@ const TestimonialCard = ({ testimonial }) => (
                 <SafeIcon key={i} icon={FiStar} className="w-3 h-3 sm:w-4 sm:h-4 fill-current" />
             ))}
         </div>
-        <p className="text-sm sm:text-base text-warm-grey italic mb-4 sm:mb-6 flex-grow leading-relaxed">
+        <p className="text-sm sm:text-base text-warm-grey italic mb-2 sm:mb-3 flex-grow leading-relaxed">
             "{testimonial.text}"
         </p>
         <div>
@@ -87,7 +87,7 @@ const TestimonialSlider = ({ testimonials }) => {
 
     return (
         <div className="relative px-2 sm:px-4 lg:px-12">
-            <div className="overflow-hidden relative h-[400px] sm:h-[450px] md:h-[480px]">
+            <div className="overflow-hidden relative h-[280px] sm:h-[300px] md:h-[320px]">
                 <AnimatePresence initial={false} custom={direction}>
                     <motion.div
                         key={page}
