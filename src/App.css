@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -17,6 +17,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Libre Baskerville', serif !important;
+  font-style: italic;
 }
 
 body {
@@ -54,6 +55,38 @@ div {
 #root {
   width: 100%;
   min-height: 100vh;
+}
+
+/* Header text should be normal, not italic */
+header,
+header *,
+header a,
+header span,
+header p,
+header button,
+header div {
+  font-style: normal !important;
+}
+
+/* Footer text should be normal, not italic */
+footer,
+footer *,
+footer a,
+footer span,
+footer p,
+footer button,
+footer div,
+footer h3 {
+  font-style: normal !important;
+}
+
+/* Product card and video card names should be italic */
+.group h3,
+[class*="ProductCard"] h3,
+div[class*="product"] h3,
+video~div h3,
+.absolute h3 {
+  font-style: italic !important;
 }
 
 /* Custom scrollbar */

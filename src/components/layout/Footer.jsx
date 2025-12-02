@@ -141,7 +141,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-medium mb-6">Get in Touch</h3>
             <div className="space-y-4">
-              <div className="flex items-start space-x-3">
+              {/* <div className="flex items-start space-x-3">
                 <SafeIcon
                   icon={FiMapPin}
                   className="w-5 h-5 text-white mt-0.5 flex-shrink-0"
@@ -150,17 +150,17 @@ const Footer = () => {
                   268 St, South New York
                   <br /> NY 98944, United States
                 </span>
-              </div>
+              </div> */}
               <div className="flex items-center space-x-3">
                 <a
-                  href="tel:+917799880180"
+                  href="tel:+919779880180"
                   className="flex items-center space-x-3"
                 >
                   <SafeIcon
                     icon={FiPhone}
                     className="w-5 h-5 text-white flex-shrink-0"
                   />
-                  <span className="text-white">+91 779 988 0180</span>
+                  <span className="text-white">+91 977 988 0180</span>
                 </a>
 
               </div>
